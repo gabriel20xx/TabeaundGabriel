@@ -2,7 +2,14 @@
     box-sizing: border-box;
 }
 
-.heart, .snow {
+img,
+figure {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-in-out forwards;
+}
+
+.heart,
+.snow {
     position: fixed;
     font-size: 1.5rem;
     top: 0;
@@ -10,7 +17,8 @@
     animation: fall 10s linear forwards;
 }
 
-.heart-btn, .snow-btn {
+.heart-btn,
+.snow-btn {
     position: fixed;
     bottom: 20px;
     width: 50px;
@@ -33,7 +41,8 @@
     right: 80px;
 }
 
-.heart-btn i, .snow-btn i {
+.heart-btn i,
+.snow-btn i {
     display: inline-block;
 }
 
@@ -46,3 +55,36 @@
         transform: translateY(100vh) translateX(0vw);
     }
 }
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+img:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+figure:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+img:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+img:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+figure:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
