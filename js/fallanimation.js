@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (heartAnimationEnabled) {
       intervalId = setInterval(createHeart, 300);
-      this.style.backgroundColor = "red";
+      this.style.backgroundColor = "darkred";
     } else {
       clearInterval(intervalId);
-      this.style.backgroundColor = "lightcoral";
+      this.style.backgroundColor = "red";
     }
   }
 
@@ -58,10 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (snowAnimationEnabled) {
       intervalId = setInterval(createSnow, 300);
-      this.style.backgroundColor = "blue";
+      this.style.backgroundColor = "darkblue";
     } else {
       clearInterval(intervalId);
-      this.style.backgroundColor = "lightblue";
+      this.style.backgroundColor = "blue";
     }
   }
 

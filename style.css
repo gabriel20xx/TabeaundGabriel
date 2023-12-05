@@ -1,5 +1,9 @@
 * {
     box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 img,
@@ -32,13 +36,21 @@ figure {
 }
 
 .heart-btn {
-    background-color: lightcoral;
+    background-color: red;
     right: 20px;
 }
 
 .snow-btn {
-    background-color: lightblue;
+    background-color: blue;
     right: 80px;
+}
+
+.heart-btn:active {
+    background-color: red
+}
+
+.snow-btn:active {
+    background-color: blue
 }
 
 .heart-btn i,
