@@ -22,7 +22,8 @@ figure {
 }
 
 .heart-btn,
-.snow-btn {
+.snow-btn,
+.envelope-btn {
     position: fixed;
     bottom: 20px;
     width: 50px;
@@ -45,6 +46,11 @@ figure {
     right: 80px;
 }
 
+.envelope-btn {
+    background-color: black;
+    right: 140px;
+}
+
 .heart-btn:active {
     background-color: red
 }
@@ -54,7 +60,8 @@ figure {
 }
 
 .heart-btn i,
-.snow-btn i {
+.snow-btn i,
+.envelope-btn {
     display: inline-block;
 }
 
@@ -143,4 +150,41 @@ body > :nth-child(15) {
 body > :nth-child(16) {
     animation-delay: 16s;
 }
+
+body > :nth-child(17) {
+    animation-delay: 17s;
+}
+
+body > :nth-child(18) {
+    animation-delay: 18s;
+}
+
+body > :nth-child(19) {
+    animation-delay: 19s;
+}
+
+body > :nth-child(20) {
+    animation-delay: 20s;
+}
+
+body > :nth-child(21) {
+    animation-delay: 21s;
+}
+
+body > :nth-child(22) {
+    animation-delay: 22s;
+}
+
+body > :nth-child(23) {
+    animation-delay: 23s;
+}
+
+body > :nth-child(24) {
+    animation-delay: 24s;
+}
+
+body > :nth-child(25) {
+    animation-delay: 25s;
+}
+
 
