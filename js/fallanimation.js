@@ -42,24 +42,26 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleHeartAnimation() {
     heartAnimationEnabled = !heartAnimationEnabled;
     var currentColor = this.style.backgroundColor;
-    this.style.backgroundColor = currentColor === "red" ? "lightcoral" : "red";
 
     if (heartAnimationEnabled) {
       intervalId = setInterval(createHeart, 300);
+      this.style.backgroundColor = "red";
     } else {
       clearInterval(intervalId);
+      this.style.backgroundColor = "lightcoral";
     }
   }
 
   function toggleSnowAnimation() {
     snowAnimationEnabled = !snowAnimationEnabled;
     var currentColor = this.style.backgroundColor;
-    this.style.backgroundColor = currentColor === "blue" ? "lightblue" : "blue";
 
     if (snowAnimationEnabled) {
       intervalId = setInterval(createSnow, 300);
+      this.style.backgroundColor = "blue";
     } else {
       clearInterval(intervalId);
+      this.style.backgroundColor = "lightblue";
     }
   }
 
