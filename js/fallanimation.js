@@ -39,23 +39,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  document.getElementById("heartButton").addEventListener("click", function () {
+  function toggleHeartAnimation() {
     heartAnimationEnabled = !heartAnimationEnabled;
+    var currentColor = this.style.backgroundColor;
+    this.style.backgroundColor = currentColor === "red" ? "lightcoral" : "red";
 
     if (heartAnimationEnabled) {
       intervalId = setInterval(createHeart, 300);
     } else {
       clearInterval(intervalId);
     }
-  });
+  }
 
-  document.getElementById("snowButton").addEventListener("click", function () {
+  function toggleSnowAnimation() {
     snowAnimationEnabled = !snowAnimationEnabled;
+    var currentColor = this.style.backgroundColor;
+    this.style.backgroundColor = currentColor === "blue" ? "lightblue" : "blue";
 
     if (snowAnimationEnabled) {
       intervalId = setInterval(createSnow, 300);
     } else {
       clearInterval(intervalId);
+    }
+  }
+
+  document.getElementById("heartButton").addEventListener("click", function (event) {
+    if (event.target.closest("#heartButton")) {
+      toggleHeartAnimation.call(this);
+    }
+  });
+
+  document.getElementById("snowButton").addEventListener("click", function (event) {
+    if (event.target.closest("#snowButton")) {
+      toggleSnowAnimation.call(this);
     }
   });
 });
