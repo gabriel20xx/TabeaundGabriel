@@ -116,3 +116,31 @@ body > :nth-child(9) {
     animation-delay: 9s;
 }
 
+body > :nth-child(10) {
+    animation-delay: 10s;
+}
+
+body > :nth-child(11) {
+    animation-delay: 11s;
+}
+
+body > :nth-child(12) {
+    animation-delay: 12s;
+}
+
+body > :nth-child(13) {
+    animation-delay: 13s;
+}
+
+body > :nth-child(14) {
+    animation-delay: 14s;
+}
+
+body > :nth-child(15) {
+    animation-delay: 15s;
+}
+
+body > :nth-child(16) {
+    animation-delay: 16s;
+}
+
