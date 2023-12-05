@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       heart.classList.add("heart");
 
       heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+      heart.style.animationDuration = Math.random() * 2 + 6 + "s";
 
       heart.innerText = "❤️";
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       setTimeout(() => {
         heart.remove();
-      }, 5000);
+      }, 10000);
     }
   }
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       snowflake.classList.add("snow");
 
       snowflake.style.left = Math.random() * 100 + "vw";
-      snowflake.style.animationDuration = Math.random() * 2 + 3 + "s";
+      snowflake.style.animationDuration = Math.random() * 2 + 6 + "s";
 
       snowflake.innerText = "❄️";
 
@@ -35,16 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       setTimeout(() => {
         snowflake.remove();
-      }, 5000);
+      }, 10000);
     }
   }
 
   document.getElementById("heartButton").addEventListener("click", function () {
-    if (snowAnimationEnabled) {
-      snowAnimationEnabled = false;
-      clearInterval(intervalId);
-    }
-
     heartAnimationEnabled = !heartAnimationEnabled;
 
     if (heartAnimationEnabled) {
@@ -55,11 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("snowButton").addEventListener("click", function () {
-    if (heartAnimationEnabled) {
-      heartAnimationEnabled = false;
-      clearInterval(intervalId);
-    }
-
     snowAnimationEnabled = !snowAnimationEnabled;
 
     if (snowAnimationEnabled) {

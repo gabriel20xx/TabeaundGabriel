@@ -7,7 +7,7 @@
     font-size: 1.5rem;
     top: 0;
     transform: translateY(0);
-    animation: fall 3s linear forwards;
+    animation: fall 10s linear forwards;
 }
 
 .snow {
@@ -15,7 +15,7 @@
     font-size: 1.5rem;
     top: 0;
     transform: translateY(0);
-    animation: fall 3s linear forwards;
+    animation: fall 10s linear forwards;
 }
 
 .heart-btn {
