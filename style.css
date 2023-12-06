@@ -29,6 +29,7 @@ figure {
     width: 100vw;
     position: fixed;
     bottom: 15px;
+    z-index: 2;
 }
 
 .button-container button {
@@ -40,7 +41,6 @@ figure {
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease;
-    z-index: 2;
 }
 
 .heart-btn {
