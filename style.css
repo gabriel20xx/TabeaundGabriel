@@ -24,7 +24,8 @@ figure {
 
 .heart-btn,
 .snow-btn,
-.envelope-btn {
+.envelope-btn,
+.lock-btn {
     position: fixed;
     bottom: 20px;
     width: 50px;
@@ -51,6 +52,11 @@ figure {
 .envelope-btn {
     background-color: black;
     right: 140px;
+}
+
+.lock-btn {
+    background-color: magenta;
+    right: 200px;
 }
 
 .heart-btn:active {
