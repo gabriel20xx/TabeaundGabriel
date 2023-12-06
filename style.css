@@ -31,11 +31,7 @@ figure {
     bottom: 15px;
 }
 
-.heart-btn,
-.snow-btn,
-.envelope-btn,
-.lock-btn,
-.star-btn {
+.button-container button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
