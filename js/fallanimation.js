@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleHeartAnimation() {
     heartAnimationEnabled = !heartAnimationEnabled;
-    var currentColor = this.style.backgroundColor;
 
     if (heartAnimationEnabled) {
       intervalId = setInterval(createHeart, 300);
@@ -54,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleSnowAnimation() {
     snowAnimationEnabled = !snowAnimationEnabled;
-    var currentColor = this.style.backgroundColor;
 
     if (snowAnimationEnabled) {
       intervalId = setInterval(createSnow, 300);
