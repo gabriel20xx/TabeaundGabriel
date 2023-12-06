@@ -134,9 +134,94 @@
         </button>
     </div>
 
+    <div class="carousel d-none">
+        <div class="frame">
+            <div class="wrapper" onclick="toggleEnvelope(event)">
+                <div class="lid one"></div>
+                <div class="lid two"></div>
+                <div class="envelope"></div>
+                <div class="letter">
+                    <p>You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your
+                        wishes come true.</p>
+                    <p class="fst-italic">- Gabriel</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="frame d-none">
+            <div class="wrapper" onclick="toggleEnvelope(event)">
+                <div class="lid one"></div>
+                <div class="lid two"></div>
+                <div class="envelope"></div>
+                <div class="letter">
+                    <p>Urs Message</p>
+                    <p class="fst-italic">- Urs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="frame d-none">
+            <div class="wrapper" onclick="toggleEnvelope(event)">
+                <div class="lid one"></div>
+                <div class="lid two"></div>
+                <div class="envelope"></div>
+                <div class="letter">
+                    <p>Diegos Message</p>
+                    <p class="fst-italic">- Diego</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p class="text-center my-2">Made with ❤️ for my Soulmate</p>
     </footer>
+
+    <script>
+        counter = 1;
+        function toggleEnvelope(event) {
+            const wrapper = event.currentTarget;
+            const frames = document.querySelectorAll('.frame');
+
+            const frameToShow = counter % frames.length;
+
+            if (wrapper.classList.contains('active')) {
+                wrapper.classList.remove('active');
+                wrapper.classList.add('disappear');
+                setTimeout(() => {
+                    wrapper.classList.remove('disappear');
+
+                    frames.forEach(frame => frame.classList.add('d-none'));
+
+                    frames[frameToShow].classList.remove('d-none');
+
+                    counter++;
+
+                    if (counter === frames.length) {
+                        counter = 0;
+                    }
+
+                    wrapper.style.display = 'block';
+                }, 2500);
+            } else {
+                wrapper.classList.add('active');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the envelope button and the envelope containers
+            var envelopeButton = document.getElementById("envelopeButton");
+            var envelopeContainers = document.getElementsByClassName("carousel");
+
+            // Add click event listener to the envelope button
+            envelopeButton.addEventListener("click", function () {
+                // Loop through each envelope container and toggle the 'd-none' class
+                for (var i = 0; i < envelopeContainers.length; i++) {
+                    envelopeContainers[i].classList.toggle("d-none");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

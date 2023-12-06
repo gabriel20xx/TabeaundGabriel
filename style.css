@@ -19,6 +19,7 @@ figure {
     top: 0;
     transform: translateY(0);
     animation: fall 10s linear forwards;
+    z-index: 1;
 }
 
 .heart-btn,
@@ -34,6 +35,7 @@ figure {
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease;
+    z-index: 2;
 }
 
 .heart-btn {
@@ -65,6 +67,122 @@ figure {
     display: inline-block;
 }
 
+
+.carousel {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    z-index: 2;
+}
+
+.wrapper {
+    height: 200px;
+    width: 300px;
+    background-color: #3760C9;
+    position: fixed;
+    bottom: calc(50% - 200px / 2);
+    left: calc(50% - 300px / 2);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.lid {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 150px solid transparent;
+    transform-origin: top;
+    transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one {
+    border-top: 100px solid #658ced;
+    transform: rotateX(0deg);
+    z-index: 30;
+    transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two {
+    border-top: 100px solid #3760C9;
+    transform: rotateX(90deg);
+    z-index: 11;
+    transition-delay: 0.5s;
+}
+
+.envelope {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top: 100px solid transparent;
+    border-right: 150px solid #C4DFF0;
+    border-bottom: 100px solid #C4DFF0;
+    border-left: 150px solid #a4d4f2;
+    z-index: 30;
+}
+
+.letter {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 20;
+    transition: 0.5s;
+}
+
+.letter p {
+    text-align: center;
+    margin: 10px;
+    color: #3B4049;
+}
+
+.wrapper.active .lid.one {
+    transform: rotateX(90deg);
+    transition-delay: 0s;
+}
+
+.wrapper.active .lid.two {
+    transform: rotateX(180deg);
+    transition-delay: 0.25s;
+}
+
+.wrapper.active .letter {
+    transform: translateY(-100px);
+    transition-delay: 0.5s;
+}
+
+.wrapper {
+    transition: opacity 2s ease-in-out;
+}
+
+.wrapper.disappear {
+    transform: translateY(-1000px);
+    transition: transform 2s ease-in-out;
+    transition-delay: 1s;
+}
+
+.wrapper.appear {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+}
+
+
+
 @keyframes fall {
     from {
         transform: translateY(-5vh) translateX(0vw);
@@ -87,104 +205,102 @@ figure {
     }
 }
 
-body > :nth-child(1) {
+body> :nth-child(1) {
     animation-delay: 1s;
 }
 
-body > :nth-child(2) {
+body> :nth-child(2) {
     animation-delay: 2s;
 }
 
-body > :nth-child(3) {
+body> :nth-child(3) {
     animation-delay: 3s;
 }
 
-body > :nth-child(4) {
+body> :nth-child(4) {
     animation-delay: 4s;
 }
 
-body > :nth-child(5) {
+body> :nth-child(5) {
     animation-delay: 5s;
 }
 
-body > :nth-child(6) {
+body> :nth-child(6) {
     animation-delay: 6s;
 }
 
-body > :nth-child(7) {
+body> :nth-child(7) {
     animation-delay: 7s;
 }
 
-body > :nth-child(8) {
+body> :nth-child(8) {
     animation-delay: 8s;
 }
 
-body > :nth-child(9) {
+body> :nth-child(9) {
     animation-delay: 9s;
 }
 
-body > :nth-child(10) {
+body> :nth-child(10) {
     animation-delay: 10s;
 }
 
-body > :nth-child(11) {
+body> :nth-child(11) {
     animation-delay: 11s;
 }
 
-body > :nth-child(12) {
+body> :nth-child(12) {
     animation-delay: 12s;
 }
 
-body > :nth-child(13) {
+body> :nth-child(13) {
     animation-delay: 13s;
 }
 
-body > :nth-child(14) {
+body> :nth-child(14) {
     animation-delay: 14s;
 }
 
-body > :nth-child(15) {
+body> :nth-child(15) {
     animation-delay: 15s;
 }
 
-body > :nth-child(16) {
+body> :nth-child(16) {
     animation-delay: 16s;
 }
 
-body > :nth-child(17) {
+body> :nth-child(17) {
     animation-delay: 17s;
 }
 
-body > :nth-child(18) {
+body> :nth-child(18) {
     animation-delay: 18s;
 }
 
-body > :nth-child(19) {
+body> :nth-child(19) {
     animation-delay: 19s;
 }
 
-body > :nth-child(20) {
+body> :nth-child(20) {
     animation-delay: 20s;
 }
 
-body > :nth-child(21) {
+body> :nth-child(21) {
     animation-delay: 21s;
 }
 
-body > :nth-child(22) {
+body> :nth-child(22) {
     animation-delay: 22s;
 }
 
-body > :nth-child(23) {
+body> :nth-child(23) {
     animation-delay: 23s;
 }
 
-body > :nth-child(24) {
+body> :nth-child(24) {
     animation-delay: 24s;
 }
 
-body > :nth-child(25) {
+body> :nth-child(25) {
     animation-delay: 25s;
 }
-
-
