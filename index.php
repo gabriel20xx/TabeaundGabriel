@@ -1,6 +1,8 @@
 <?php
 
-if(isset($_POST['pwd']) && $_POST['pwd'] == '2306') {
+$pin = '2306';
+
+if(isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     echo '
     <!DOCTYPE html>
     <html lang="en" data-bs-theme="dark">
@@ -188,13 +190,18 @@ if(isset($_POST['pwd']) && $_POST['pwd'] == '2306') {
     ';
 } else {
     echo '
-    <h1>Page is locked</h1>
+    <h1>Please enter pin code</h1>
     <form action="/index.php" method="post">
         <label for="pwd">Password</label>
         <input type="password" id="pwd" name="pwd"> 
         <input type="submit" value="Submit">
     </form>
     ';
+    if($_POST['pwd'] != $pin) {
+        echo '
+        <p>Pin is wrong!</p>
+        ';
+    }
 }
 
 ?>
