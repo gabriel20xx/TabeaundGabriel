@@ -1,7 +1,6 @@
 <?php
-$unlocked = false;
 
-if ($unlocked == true) {
+if(isset($_POST['pwd']) && $_POST['pwd'] == '1234') {
     echo '
     <!DOCTYPE html>
     <html lang="en" data-bs-theme="dark">
@@ -190,5 +189,12 @@ if ($unlocked == true) {
 } else {
     echo '
     <h1>Page is locked</h1>
+    <form action="/index.php" method="post">
+<label for="pwd">Password</label>
+<input type="password" id="pwd" name="pwd"> 
+<input type="submit" value="Submit">
+</form>
     ';
 }
+
+?>
