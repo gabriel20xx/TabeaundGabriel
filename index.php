@@ -38,7 +38,8 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
 
     // Loop through both arrays based on specified iterations
     $x = 1;
-    for ($i = 0; $i < count($quotesAuthors + count($images)); $i++) {
+    $y = 1;
+    for ($i = 0; $i < count($quotesAuthors) + count($images); $i++) {
         if ($i % 3 == 0 || $i % 3 == 2) {
             // Display image for 1st, 3rd, 4th, 6th, 7th, 9th iteration
             echo '<img src="img/image'. $x .'-min.jpg" class="img-fluid" alt="..." loading="lazy">';
@@ -47,12 +48,13 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
             // Display quote for other iterations
             echo '<figure class="text-center my-5 mx-2">';
             echo '<blockquote class="blockquote">';
-            echo '<p>' . $quotesAuthors[$i]["quote"] . '</p>';
+            echo '<p>' . $quotesAuthors[$y]["quote"] . '</p>';
             echo '</blockquote>';
             echo '<figcaption class="blockquote-footer">';
-            echo $quotesAuthors[$i]["author"];
+            echo $quotesAuthors[$y]["author"];
             echo '</figcaption>';
             echo '</figure>';
+            $y++;
         }
     }
 
