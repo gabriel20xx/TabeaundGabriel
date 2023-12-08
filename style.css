@@ -324,3 +324,39 @@ body> :nth-child(24) {
 body> :nth-child(25) {
     animation-delay: 25s;
 }
+
+
+
+#pin_input {
+    display: flex;
+    column-gap: 8px;
+}
+
+#pin_input input {
+    text-align: center;
+    padding: 10px 8px 10px 8px;
+    border: 1px solid #adadad;
+    border-radius: 4px;
+    outline: none;
+    height: 64px;
+    width: 50px;
+}
+
+#pin_input input:focus {
+    border: 1px solid #497e76;
+}
+
+#pin_input input:focus::placeholder {
+    color: transparent;
+}
+
+#pin_input input::-webkit-outer-spin-button,
+#pin_input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#pin_input input[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}

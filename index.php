@@ -104,9 +104,12 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     echo '</html>';
 } else {
     echo '<h1>Please enter pin code</h1>';
-    echo '<form action="/index.php" method="post">';
-    echo '<label for="pwd">Password</label>';
-    echo '<input type="password" id="pwd" name="pwd"> ';
+    echo '<form id="pin_input" action="/index.php" method="post">';
+    echo '<input id="pin1" name="pin1" placeholder="_" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" />';
+    echo '<input id="pin1" name="pin1" placeholder="_" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" />';
+    echo '<input id="pin1" name="pin1" placeholder="_" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" />';
+    echo '<input id="pin1" name="pin1" placeholder="_" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" />';
+    echo '<input id="otp-value" placeholder="_" type="hidden" name="otp" />';
     echo '<input type="submit" value="Submit">';
     echo '</form>';
 
