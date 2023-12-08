@@ -39,7 +39,7 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     // Loop through both arrays based on specified iterations
     $x = 1;
     $y = 1;
-    for ($i = 0; $i < count($quotesAuthors) + count($images); $i++) {
+    for ($i = 0; $i < count($quotesAuthors) + 16; $i++) {
         if ($i % 3 == 0 || $i % 3 == 2) {
             // Display image for 1st, 3rd, 4th, 6th, 7th, 9th iteration
             echo '<img src="img/image'. $x .'-min.jpg" class="img-fluid" alt="..." loading="lazy">';
