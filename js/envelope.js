@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add click event listener to the envelope button
     envelopeButton.addEventListener("click", function () {
         // Loop through each envelope container and toggle the 'd-none' class
-        for (var i = 0; i < envelopeContainers.length; i++) {
-            envelopeContainers[i].classList.toggle("d-none");
+        envelopeContainers.classList.toggle("d-none");
+        for (var i = 0; i < frameContainer.length; i++) {
             frameContainer[i].classList.toggle("appear");
         }
     });
