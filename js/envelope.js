@@ -1,8 +1,9 @@
 counter = 1;
+current = 1;
 function toggleEnvelope(event) {
     const wrapper = event.currentTarget;
     const frames = document.querySelectorAll('.frame');
-
+    var frameContainer = document.getElementsByClassName("wrapper");
     const frameToShow = counter % frames.length;
 
     if (wrapper.classList.contains('active')) {
@@ -21,11 +22,17 @@ function toggleEnvelope(event) {
                 counter = 0;
             }
 
+            if (current === frames.length) {
+                current = 0;
+            }
+
             wrapper.style.display = 'block';
         }, 2500);
-        wrapper.classList.add('appear');
+        current++;
+        frameContainer[current].classList.add("appear");
     } else {
         wrapper.classList.add('active');
+        wrapper.classList.remove('appear');
     }
 }
 
@@ -37,10 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add click event listener to the envelope button
     envelopeButton.addEventListener("click", function () {
-        // Loop through each envelope container and toggle the 'd-none' class
+        frameContainer[current].classList.toggle("appear");
         envelopeContainers.classList.toggle("d-none");
-        for (var i = 0; i < frameContainer.length; i++) {
-            frameContainer[i].classList.toggle("appear");
-        }
     });
 });

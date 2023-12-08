@@ -221,7 +221,7 @@ figure {
     }
 
     100% {
-        transform: translateX(0vw);
+        transform: translateX(50vw);
     }
 }
 
