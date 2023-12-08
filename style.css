@@ -186,9 +186,9 @@ figure {
     transition-delay: 1s;
 }
 
-.wrapper.appear {
+.appear {
     opacity: 1;
-    transition: opacity 3s ease-in-out;
+    animation: flyIn 1s linear;
 }
 
 
@@ -212,6 +212,16 @@ figure {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes flyIn {
+    0% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }
 

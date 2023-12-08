@@ -23,6 +23,7 @@ function toggleEnvelope(event) {
 
             wrapper.style.display = 'block';
         }, 2500);
+        wrapper.classList.add('appear');
     } else {
         wrapper.classList.add('active');
     }
@@ -32,12 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the envelope button and the envelope containers
     var envelopeButton = document.getElementById("envelopeButton");
     var envelopeContainers = document.getElementsByClassName("carousel");
+    var frameContainer = document.getElementsByClassName("wrapper");
 
     // Add click event listener to the envelope button
     envelopeButton.addEventListener("click", function () {
         // Loop through each envelope container and toggle the 'd-none' class
         for (var i = 0; i < envelopeContainers.length; i++) {
             envelopeContainers[i].classList.toggle("d-none");
+            frameContainer[i].classList.toggle("appear");
         }
     });
 });
