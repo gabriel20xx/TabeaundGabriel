@@ -197,7 +197,7 @@ if(isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
         <input type="submit" value="Submit">
     </form>
     ';
-    if($_POST['pwd'] != $pin) {
+    if(isset($_POST['pwd']) && $_POST['pwd'] != $pin) {
         echo '
         <p>Pin is wrong!</p>
         ';
