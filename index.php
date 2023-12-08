@@ -9,27 +9,24 @@ if (is_dir($imageFolder)) {
 
 
 if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
-    echo '
-    <!DOCTYPE html>
-    <html lang="en" data-bs-theme="dark">
-    
-    <head>
-        <title>Tabea und Gabriel</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    echo '<!DOCTYPE html>';
+    echo '<html lang="en" data-bs-theme="dark">';
+    echo '<head>';
+    echo '<title>Tabea und Gabriel</title>';
+    echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+    echo '<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>';
+    echo '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="js/fallanimation.js"></script>
-        <script src="js/envelope.js"></script>
-        <script src="js/changebackground.js"></script>
-    </head>
-    
-    <body>';
+            crossorigin="anonymous"></script>';
+    echo '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">';
+    echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">';
+    echo '<link rel="stylesheet" type="text/css" href="style.css">';
+    echo '<script src="js/fallanimation.js"></script>';
+    echo '<script src="js/envelope.js"></script>';
+    echo '<script src="js/changebackground.js"></script>';
+    echo '</head>';
+    echo '<body>';
 
     $quotesAuthors = [
         ["quote" => "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.", "author" => "Angelita Lim"],
@@ -48,7 +45,7 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     for ($i = 0; $i < count($quotesAuthors) + $imageCount; $i++) {
         if ($i % 3 == 0 || $i % 3 == 2) {
             // Display image for 1st, 3rd, 4th, 6th, 7th, 9th iteration
-            echo '<img src="img/image'. $x .'-min.jpg" class="img-fluid" alt="..." loading="lazy">';
+            echo '<img src="img/image' . $x . '-min.jpg" class="img-fluid" alt="..." loading="lazy">';
             $x++;
         } else {
             // Display quote for other iterations
@@ -71,7 +68,7 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     echo '<div class="button-container">';
     foreach ($buttonClasses as $class) {
         echo '<button class="' . $class . '-btn" id="' . $class . 'Button">';
-        echo '<i class="bi bi-' . $class. '"></i>';
+        echo '<i class="bi bi-' . $class . '"></i>';
         echo '</button>';
     }
     echo '</div>';
@@ -100,26 +97,20 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     }
     echo '</div>';
 
-    echo '
-        <footer>
-            <p class="text-center my-2">Made with ❤️ for my Soulmate</p>
-        </footer>
-    </body>
-    
-    </html>
-    ';
+    echo '<footer>';
+    echo '<p class="text-center my-2">Made with ❤️ for my Soulmate</p>';
+    echo '</footer>';
+    echo '</body>';
+    echo '</html>';
 } else {
-    echo '
-    <h1>Please enter pin code</h1>
-    <form action="/index.php" method="post">
-        <label for="pwd">Password</label>
-        <input type="password" id="pwd" name="pwd"> 
-        <input type="submit" value="Submit">
-    </form>
-    ';
+    echo '<h1>Please enter pin code</h1>';
+    echo '<form action="/index.php" method="post">';
+    echo '<label for="pwd">Password</label>';
+    echo '<input type="password" id="pwd" name="pwd"> ';
+    echo '<input type="submit" value="Submit">';
+    echo '</form>';
+
     if (isset($_POST['pwd']) && $_POST['pwd'] != $pin) {
-        echo '
-        <p>Pin is wrong!</p>
-        ';
+        echo '<p>Pin is wrong!</p>';
     }
 }
