@@ -71,7 +71,7 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     echo '<div class="button-container">';
     foreach ($buttonClasses as $class) {
         echo '<button class="' . $class . '" id="' . substr($class, 0, -4) . 'Button">';
-        echo '<i class="bi bi-' . substr($class, 0, -4) . '-fill"></i>';
+        echo '<i class="bi bi-' . substr($class, 0, -4) . '"></i>';
         echo '</button>';
     }
     echo '</div>';
