@@ -65,13 +65,13 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     }
 
 
-    $buttonClasses = ['star-btn', 'lock-btn', 'envelope-btn', 'snow-btn', 'heart-btn'];
+    $buttonClasses = ['star', 'lock', 'envelope', 'snow', 'heart'];
 
     // Loop through the array to generate buttons
     echo '<div class="button-container">';
     foreach ($buttonClasses as $class) {
-        echo '<button class="' . $class . '" id="' . substr($class, 0, -4) . 'Button">';
-        echo '<i class="bi bi-' . substr($class, 0, -4) . '"></i>';
+        echo '<button class="' . $class . '-btn" id="' . $class . 'Button">';
+        echo '<i class="bi bi-' . $class. '"></i>';
         echo '</button>';
     }
     echo '</div>';
