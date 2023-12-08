@@ -4,7 +4,7 @@ $pin = '2306';
 $imageFolder = './img';
 
 if (is_dir($imageFolder)) {
-    $imageCount = count(array_diff(scandir($folderPath), ['.', '..']));
+    $imageCount = count(array_diff(scandir($imageFolder), ['.', '..']));
 }
 
 
