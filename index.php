@@ -2,7 +2,7 @@
 
 $pin = '2306';
 
-if(isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
+if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     echo '
     <!DOCTYPE html>
     <html lang="en" data-bs-theme="dark">
@@ -23,164 +23,76 @@ if(isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
         <script src="js/changebackground.js"></script>
     </head>
     
-    <body>
-    
-        <img src="img/image1-min.jpg" class="img-fluid" alt="..." loading="lazy">
-    
-        <figure class="text-center my-5 mx-2">
-            <blockquote class="blockquote">
-                <p>I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you
-                    even more.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Angelita Lim
-            </figcaption>
-        </figure>
-    
-        <img src="img/image2-min.jpg" class="img-fluid" alt="..." loading="lazy">
-        <img src="img/image3-min.jpg" class="img-fluid" alt="..." loading="lazy">
-    
-        <figure class="text-center my-5">
-            <blockquote class="blockquote">
-                <p>You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.
-                </p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Dr. Seuss
-            </figcaption>
-        </figure>
-    
-        <img src="img/image4-min.jpg" class="img-fluid" alt="..." loading="lazy">
-        <img src="img/image5-min.jpg" class="img-fluid" alt="..." loading="lazy">
-    
-        <figure class="text-center my-5">
-            <blockquote class="blockquote">
-                <p>Love is that condition in which the happiness of another person is essential to your own.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Robert A. Heinlein
-            </figcaption>
-        </figure>
-    
-        <img src="img/image6-min.jpg" class="img-fluid" alt="..." loading="lazy">
-        <img src="img/image7-min.jpg" class="img-fluid" alt="..." loading="lazy">
-    
-        <figure class="text-center my-5">
-            <blockquote class="blockquote">
-                <p>The best thing to hold onto in life is each other.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Audrey Hepburn
-            </figcaption>
-        </figure>
-    
-        <img src="img/image8-min.jpg" class="img-fluid" alt="..." loading="lazy">
-        <img src="img/image9-min.jpg" class="img-fluid" alt="..." loading="lazy">
-    
-        <figure class="text-center my-5">
-            <blockquote class="blockquote">
-                <p>I need you like a heart needs a beat.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Unknown
-            </figcaption>
-        </figure>
-    
-        <img src="img/image10-min.jpg" class="img-fluid" alt="..." loading="lazy">
-        <img src="img/image11-min.jpg" class="img-fluid" alt="..." loading="lazy">
-    
-        <figure class="text-center my-5">
-            <blockquote class="blockquote">
-                <p>I am who I am because of you. You are every reason, every hope, and every dream I’ve ever had.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                The Notebook
-            </figcaption>
-        </figure>
-    
-        <img src="img/image12-min.jpg" class="img-fluid" alt="..." loading="lazy">
-        <img src="img/image13-min.jpg" class="img-fluid" alt="..." loading="lazy">
-    
-        <figure class="text-center my-5">
-            <blockquote class="blockquote">
-                <p>If I had a flower for every time I thought of you... I could walk through my garden forever.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Alfred Tennyson
-            </figcaption>
-        </figure>
-    
-        <img src="img/image14-min.jpg" class="img-fluid" alt="..." loading="lazy">
-        <img src="img/image15-min.jpg" class="img-fluid" alt="..." loading="lazy">
-    
-        <figure class="text-center my-5">
-            <blockquote class="blockquote">
-                <p>Take my hand, take my whole life too. For I can’t help falling in love with you.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Elvis Presley
-            </figcaption>
-        </figure>
-    
-        <img src="img/image16-min.jpg" class="img-fluid" alt="..." loading="lazy">
-    
-        <div class="button-container">
-            <button class="star-btn" id="starButton">
-                <i class="bi bi-star-fill"></i>
-            </button>
-            <button class="lock-btn" id="lockButton">
-                <i class="bi bi-lock-fill"></i>
-            </button>
-            <button class="envelope-btn" id="envelopeButton">
-                <i class="bi bi-envelope-fill"></i>
-            </button>
-            <button class="snow-btn" id="snowButton">
-                <i class="bi bi-snow"></i>
-            </button>
-            <button class="heart-btn" id="heartButton">
-                <i class="bi bi-heart-fill"></i>
-            </button>
-        </div>
-    
-        <div class="carousel d-none">
-            <div class="frame">
-                <div class="wrapper" onclick="toggleEnvelope(event)">
-                    <div class="lid one"></div>
-                    <div class="lid two"></div>
-                    <div class="envelope"></div>
-                    <div class="letter">
-                        <p>You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your
-                            wishes come true.</p>
-                        <p class="fst-italic">- Gabriel</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="frame d-none">
-                <div class="wrapper" onclick="toggleEnvelope(event)">
-                    <div class="lid one"></div>
-                    <div class="lid two"></div>
-                    <div class="envelope"></div>
-                    <div class="letter">
-                        <p>Urs Message</p>
-                        <p class="fst-italic">- Urs</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="frame d-none">
-                <div class="wrapper" onclick="toggleEnvelope(event)">
-                    <div class="lid one"></div>
-                    <div class="lid two"></div>
-                    <div class="envelope"></div>
-                    <div class="letter">
-                        <p>Diegos Message</p>
-                        <p class="fst-italic">- Diego</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
+    <body>';
+
+    $quotesAuthors = [
+        ["quote" => "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.", "author" => "Angelita Lim"],
+        ["quote" => "You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.", "author" => "Dr. Seuss"],
+        ["quote" => "Love is that condition in which the happiness of another person is essential to your own.", "author" => "Robert A. Heinlein"],
+        ["quote" => "The best thing to hold onto in life is each other.", "author" => "Audrey Hepburn"],
+        ["quote" => "I need you like a heart needs a beat.", "author" => "Unknown"],
+        ["quote" => "I am who I am because of you. You are every reason, every hope, and every dream I’ve ever had.", "author" => "The Notebook"],
+        ["quote" => "If I had a flower for every time I thought of you... I could walk through my garden forever.", "author" => "Alfred Tennyson"],
+        ["quote" => "Take my hand, take my whole life too. For I can’t help falling in love with you.", "author" => "Elvis Presley"],
+    ];
+
+    // Loop through both arrays based on specified iterations
+    $x = 1;
+    for ($i = 0; $i < count($quotesAuthors + count($images)); $i++) {
+        if ($i % 3 == 0 || $i % 3 == 2) {
+            // Display image for 1st, 3rd, 4th, 6th, 7th, 9th iteration
+            echo '<img src="img/image'. $x .'-min.jpg" class="img-fluid" alt="..." loading="lazy">';
+            $x++;
+        } else {
+            // Display quote for other iterations
+            echo '<figure class="text-center my-5 mx-2">';
+            echo '<blockquote class="blockquote">';
+            echo '<p>' . $quotesAuthors[$i]["quote"] . '</p>';
+            echo '</blockquote>';
+            echo '<figcaption class="blockquote-footer">';
+            echo $quotesAuthors[$i]["author"];
+            echo '</figcaption>';
+            echo '</figure>';
+        }
+    }
+
+
+    $buttonClasses = ['star-btn', 'lock-btn', 'envelope-btn', 'snow-btn', 'heart-btn'];
+
+    // Loop through the array to generate buttons
+    echo '<div class="button-container">';
+    foreach ($buttonClasses as $class) {
+        echo '<button class="' . $class . '" id="' . $class . '">';
+        echo '<i class="bi bi-' . substr($class, 0, -4) . '-fill"></i>';
+        echo '</button>';
+    }
+    echo '</div>';
+
+
+    $data = [
+        ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true."],
+        ["name" => "Urs", "message" => "Urs Message"],
+        ["name" => "Diego", "message" => "Diegos Message"]
+    ];
+
+    // Loop through the array to generate carousel frames
+    echo '<div class="carousel d-none">';
+    foreach ($data as $entry) {
+        echo '<div class="frame">';
+        echo '<div class="wrapper" onclick="toggleEnvelope(event)">';
+        echo '<div class="lid one"></div>';
+        echo '<div class="lid two"></div>';
+        echo '<div class="envelope"></div>';
+        echo '<div class="letter">';
+        echo '<p>' . $entry["message"] . '</p>';
+        echo '<p class="fst-italic">- ' . $entry["name"] . '</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+    }
+    echo '</div>';
+
+    echo '
         <footer>
             <p class="text-center my-2">Made with ❤️ for my Soulmate</p>
         </footer>
@@ -197,11 +109,9 @@ if(isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
         <input type="submit" value="Submit">
     </form>
     ';
-    if(isset($_POST['pwd']) && $_POST['pwd'] != $pin) {
+    if (isset($_POST['pwd']) && $_POST['pwd'] != $pin) {
         echo '
         <p>Pin is wrong!</p>
         ';
     }
 }
-
-?>
