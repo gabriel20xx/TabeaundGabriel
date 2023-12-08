@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['pwd']) && $_POST['pwd'] == '1234') {
+if(isset($_POST['pwd']) && $_POST['pwd'] == '2306') {
     echo '
     <!DOCTYPE html>
     <html lang="en" data-bs-theme="dark">
@@ -190,10 +190,10 @@ if(isset($_POST['pwd']) && $_POST['pwd'] == '1234') {
     echo '
     <h1>Page is locked</h1>
     <form action="/index.php" method="post">
-<label for="pwd">Password</label>
-<input type="password" id="pwd" name="pwd"> 
-<input type="submit" value="Submit">
-</form>
+        <label for="pwd">Password</label>
+        <input type="password" id="pwd" name="pwd"> 
+        <input type="submit" value="Submit">
+    </form>
     ';
 }
 
