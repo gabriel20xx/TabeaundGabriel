@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add click event listener to the envelope button
     envelopeButton.addEventListener("click", function () {
+        envelopeContainers.classList.toggle("d-none");
         frameContainer[current].classList.toggle("appear");
         frameContainer[current].classList.toggle("d-none");
-        envelopeContainers.classList.toggle("d-none");
     });
 });
