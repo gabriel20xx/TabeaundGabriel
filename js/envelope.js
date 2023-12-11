@@ -29,12 +29,12 @@ function toggleEnvelope(event) {
 document.addEventListener("DOMContentLoaded", function () {
     // Get the envelope button and the envelope containers
     var envelopeButton = document.getElementById("envelopeButton");
-    var envelopeContainers = document.getElementsByClassName("carousel");
+    var envelopeContainer = document.getElementById("envelopeContainer");
     var frameContainer = document.getElementsByClassName("wrapper");
 
     // Add click event listener to the envelope button
     envelopeButton.addEventListener("click", function () {
-        envelopeContainers.classList.toggle("d-none");
+        envelopeContainer.classList.toggle("d-none");
         frameContainer[current].classList.toggle("appear");
         frameContainer[current].classList.toggle("d-none");
     });

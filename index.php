@@ -101,7 +101,7 @@ if ($unlocked) {
     ];
 
     // Loop through the array to generate carousel frames
-    echo '<div class="carousel d-none">';
+    echo '<div class="d-none" id="envelopeContainer">';
     foreach ($data as $entry) {
         echo '<div class="frame">';
         echo '<div class="wrapper" onclick="toggleEnvelope(event)">';
