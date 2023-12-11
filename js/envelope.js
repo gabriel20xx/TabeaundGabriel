@@ -14,7 +14,6 @@ function toggleEnvelope(event) {
                 current = 0;
             }
 
-            wrapper.style.display = 'block';
             wrapper.classList.add('d-none');
             current++;
             frameContainer[current].classList.add("appear");
