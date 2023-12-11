@@ -129,7 +129,7 @@ if ($unlocked) {
     echo '<form id="pin_input" action="/index.php" method="post">';
     echo '<div class="container d-flex flex-column">';
     echo '<h1>Please enter pin code</h1>';
-    echo '<div>';
+    echo '<div class="my-2">';
     echo '<input id="pin1" name="pin1" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input m-2" />';
     echo '<input id="pin2" name="pin2" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input m-2" />';
     echo '<input id="pin3" name="pin3" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input m-2" />';
