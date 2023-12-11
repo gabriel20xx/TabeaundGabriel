@@ -138,11 +138,12 @@ if ($unlocked) {
     echo '<button type="submit" name="submit" class="btn btn-primary">Submit</button>';
     echo '</div>';
     echo '</form>';
-    echo '</div>';
 
     if ($incorrect) {
         echo '<p>Pin is wrong!</p>';
     }
+
+    echo '</div>';
 
     echo '<script src="js/pin.js"></script>';
 }
