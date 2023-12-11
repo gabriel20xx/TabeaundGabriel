@@ -1,10 +1,33 @@
 <?php
 
-$pin = '2306';
+$unlocked = false;
+$incorrect = false;
 $imageFolder = './img';
 
 if (is_dir($imageFolder)) {
     $imageCount = count(array_diff(scandir($imageFolder), ['.', '..']));
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
+    $pin1 = isset($_POST["pin1"]) ? $_POST["pin1"] : "";
+    $pin2 = isset($_POST["pin2"]) ? $_POST["pin2"] : "";
+    $pin3 = isset($_POST["pin3"]) ? $_POST["pin3"] : "";
+    $pin4 = isset($_POST["pin4"]) ? $_POST["pin4"] : "";
+    $pin = $pin1 . $pin2 . $pin3 . $pin4;
+
+    $startDate = new DateTime('2022-06-23');
+    $today = new DateTime();
+
+    $interval = date_diff($startDate, $today);
+    $daysSince = $interval->format('%a');
+    
+    $correctPin = str_pad($daysSince, 4, '0', STR_PAD_LEFT);
+
+    if ($pin == $correctPin) {
+        $unlocked = true;
+    } else {
+        $incorrect = true;
+    }
 }
 
 echo '<!DOCTYPE html>';
@@ -23,10 +46,11 @@ echo '<link rel="stylesheet" type="text/css" href="style.css">';
 echo '<script src="js/fallanimation.js"></script>';
 echo '<script src="js/envelope.js"></script>';
 echo '<script src="js/changebackground.js"></script>';
+echo '<script src="js/pin.js"></script>';
 echo '</head>';
 echo '<body>';
 
-if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
+if ($unlocked) {
     $quotesAuthors = [
         ["quote" => "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.", "author" => "Angelita Lim"],
         ["quote" => "You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.", "author" => "Dr. Seuss"],
@@ -100,17 +124,18 @@ if (isset($_POST['pwd']) && $_POST['pwd'] == $pin) {
     echo '<p class="text-center my-2">Made with ❤️ for my Soulmate</p>';
     echo '</footer>';
 } else {
+    echo '<div class="container d-flex align-items-center justify-content-center text-center">';
     echo '<h1>Please enter pin code</h1>';
     echo '<form id="pin_input" action="/index.php" method="post">';
-    echo '<input id="pin1" name="pin1" placeholder="_" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" />';
-    echo '<input id="pin1" name="pin1" placeholder="_" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" />';
-    echo '<input id="pin1" name="pin1" placeholder="_" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" />';
-    echo '<input id="pin1" name="pin1" placeholder="_" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" />';
-    echo '<input id="otp-value" placeholder="_" type="hidden" name="otp" />';
-    echo '<input type="submit" value="Submit">';
+    echo '<input id="pin1" name="pin1" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" maxlength="1" class="pin-input" />';
+    echo '<input id="pin2" name="pin2" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" maxlength="1" class="pin-input" />';
+    echo '<input id="pin3" name="pin3" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" maxlength="1" class="pin-input" />';
+    echo '<input id="pin4" name="pin4" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" maxlength="1" class="pin-input" />';
+    echo '<button type="submit" class="btn btn-primary">Submit</button>';
     echo '</form>';
+    echo '</div>';
 
-    if (isset($_POST['pwd']) && $_POST['pwd'] != $pin) {
+    if ($incorrect) {
         echo '<p>Pin is wrong!</p>';
     }
 }
