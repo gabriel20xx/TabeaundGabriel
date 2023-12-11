@@ -1,7 +1,5 @@
 <?php
 
-$unlocked = false;
-$incorrect = false;
 $imageFolder = './img';
 
 if (is_dir($imageFolder)) {
@@ -25,9 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 
     if ($pin == $correctPin) {
         $unlocked = true;
+        $incorrect = false;
     } else {
         $incorrect = true;
     }
+} else {
+    $unlocked = false;
 }
 
 echo '<!DOCTYPE html>';
