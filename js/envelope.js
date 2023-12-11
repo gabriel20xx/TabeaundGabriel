@@ -15,11 +15,11 @@ function toggleEnvelope(event) {
             }
 
             wrapper.style.display = 'block';
+            wrapper.classList.add('d-none');
+            current++;
+            frameContainer[current].classList.add("appear");
+            frameContainer[current].classList.remove("d-none");
         }, 2500);
-        wrapper.classList.add('d-none');
-        current++;
-        frameContainer[current].classList.add("appear");
-        frameContainer[current].classList.remove("d-none");
     } else {
         wrapper.classList.add('active');
         wrapper.classList.remove('appear');
