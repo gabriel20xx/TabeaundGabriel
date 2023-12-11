@@ -125,7 +125,7 @@ if ($unlocked) {
     echo '<script src="js/envelope.js"></script>';
     echo '<script src="js/changebackground.js"></script>';
 } else {
-    echo '<div class="container d-flex flex-column align-items-center justify-content-center text-center vh-100">';
+    echo '<div class="container d-flex align-items-center justify-content-center text-center vh-100">';
     echo '<form id="pin_input" action="/index.php" method="post">';
     echo '<div class="container d-flex flex-column';
     echo '<h1>Please enter pin code</h1>';
