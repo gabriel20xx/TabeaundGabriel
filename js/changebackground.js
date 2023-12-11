@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toggleButton("heartButton", "darkred", "red", heartEnabled);
     toggleButton("snowButton", "darkblue", "blue", snowEnabled);
-    toggleButton("envelopeButton", "darkblack", "black", envelopeEnabled);
+    toggleButton("envelopeButton", "black", "gray", envelopeEnabled);
     toggleButton("lockButton", "darkmagenta", "magenta", lockEnabled);
     toggleButton("starButton", "darkorange", "orange", starEnabled);
 });
