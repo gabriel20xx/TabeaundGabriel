@@ -140,7 +140,7 @@ if ($unlocked) {
     echo '</form>';
 
     if ($incorrect) {
-        echo '<p>Pin is wrong!</p>';
+        echo '<p class="text-danger">Pin is wrong!</p>';
     }
 
     echo '</div>';
