@@ -6,7 +6,7 @@ if (is_dir($imageFolder)) {
     $imageCount = count(array_diff(scandir($imageFolder), ['.', '..']));
 }
 
-if (isset($_POST["submit"])) {
+if (isset($_POST["pin1"])) {
     $pin1 = isset($_POST["pin1"]) ? $_POST["pin1"] : "";
     $pin2 = isset($_POST["pin2"]) ? $_POST["pin2"] : "";
     $pin3 = isset($_POST["pin3"]) ? $_POST["pin3"] : "";
