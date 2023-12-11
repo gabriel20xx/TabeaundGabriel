@@ -127,15 +127,21 @@ if ($unlocked) {
 } else {
     echo '<div class="container d-flex align-items-center justify-content-center text-center vh-100">';
     echo '<div class="col">';
-    echo '<div class="row">';
     echo '<h1>Please enter pin code</h1>';
-    echo '</div>';
     echo '<form id="pin_input" action="/index.php" method="post">';
-    echo '<div class="row d-flex align-items-center justify-content-center mb-2">';
+    echo '<div class="row mb-2">';
+    echo '<div class="col">';
     echo '<input id="pin1" name="pin1" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
+    echo '</div>';
+    echo '<div class="col">';
     echo '<input id="pin2" name="pin2" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
+    echo '</div>';
+    echo '<div class="col">';
     echo '<input id="pin3" name="pin3" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
+    echo '</div>';
+    echo '<div class="col">';
     echo '<input id="pin4" name="pin4" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
+    echo '</div>';
     echo '</div>';
     echo '<div class="row mx-auto">';
     echo '<button type="submit" name="submit" class="btn btn-primary">Submit</button>';
@@ -143,7 +149,6 @@ if ($unlocked) {
     echo '</form>';
     echo '</div>';
     echo '</div>';
-    
 
     if ($incorrect) {
         echo '<p>Pin is wrong!</p>';
