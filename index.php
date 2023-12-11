@@ -125,13 +125,15 @@ if ($unlocked) {
     echo '<script src="js/envelope.js"></script>';
     echo '<script src="js/changebackground.js"></script>';
 } else {
-    echo '<div class="container d-flex align-items-center justify-content-center text-center vh-100">';
+    echo '<div class="container d-flex flex-column align-items-center justify-content-center text-center vh-100">';
     echo '<h1>Please enter pin code</h1>';
     echo '<form id="pin_input" action="/index.php" method="post">';
+    echo '<div>';
     echo '<input id="pin1" name="pin1" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
     echo '<input id="pin2" name="pin2" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
     echo '<input id="pin3" name="pin3" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
     echo '<input id="pin4" name="pin4" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
+    echo '</div>';
     echo '<button type="submit" name="submit" class="btn btn-primary">Submit</button>';
     echo '</form>';
     echo '</div>';
