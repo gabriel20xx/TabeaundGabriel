@@ -6,7 +6,7 @@ if (is_dir($imageFolder)) {
     $imageCount = count(array_diff(scandir($imageFolder), ['.', '..']));
 }
 
-if (isset($_POST["pin1"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
     $pin1 = isset($_POST["pin1"]) ? $_POST["pin1"] : "";
     $pin2 = isset($_POST["pin2"]) ? $_POST["pin2"] : "";
     $pin3 = isset($_POST["pin3"]) ? $_POST["pin3"] : "";
@@ -134,7 +134,7 @@ if ($unlocked) {
     echo '<input id="pin2" name="pin2" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
     echo '<input id="pin3" name="pin3" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
     echo '<input id="pin4" name="pin4" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
-    echo '<button type="submit" class="btn btn-primary">Submit</button>';
+    echo '<button type="submit" name="submit" class="btn btn-primary">Submit</button>';
     echo '</form>';
     echo '</div>';
     echo '</div>';
