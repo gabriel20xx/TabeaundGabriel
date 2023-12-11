@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 
     $interval = date_diff($startDate, $today);
     $daysSince = $interval->format('%a');
-    
+
     $correctPin = str_pad($daysSince, 4, '0', STR_PAD_LEFT);
 
     if ($pin == $correctPin) {
@@ -44,10 +44,6 @@ echo '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstra
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">';
 echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">';
 echo '<link rel="stylesheet" type="text/css" href="style.css">';
-echo '<script src="js/fallanimation.js"></script>';
-echo '<script src="js/envelope.js"></script>';
-echo '<script src="js/changebackground.js"></script>';
-echo '<script src="js/pin.js"></script>';
 echo '</head>';
 echo '<body>';
 
@@ -124,14 +120,18 @@ if ($unlocked) {
     echo '<footer>';
     echo '<p class="text-center my-2">Made with ❤️ for my Soulmate</p>';
     echo '</footer>';
+
+    echo '<script src="js/fallanimation.js"></script>';
+    echo '<script src="js/envelope.js"></script>';
+    echo '<script src="js/changebackground.js"></script>';
 } else {
     echo '<div class="container d-flex align-items-center justify-content-center text-center">';
     echo '<h1>Please enter pin code</h1>';
     echo '<form id="pin_input" action="/index.php" method="post">';
-    echo '<input id="pin1" name="pin1" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" maxlength="1" class="pin-input" />';
-    echo '<input id="pin2" name="pin2" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" maxlength="1" class="pin-input" />';
-    echo '<input id="pin3" name="pin3" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" maxlength="1" class="pin-input" />';
-    echo '<input id="pin4" name="pin4" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" maxlength="1" class="pin-input" />';
+    echo '<input id="pin1" name="pin1" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
+    echo '<input id="pin2" name="pin2" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
+    echo '<input id="pin3" name="pin3" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
+    echo '<input id="pin4" name="pin4" type="number" step="1" min="0" max="9" autocomplete="no" maxlength="1" class="pin-input" />';
     echo '<button type="submit" class="btn btn-primary">Submit</button>';
     echo '</form>';
     echo '</div>';
@@ -140,14 +140,7 @@ if ($unlocked) {
         echo '<p>Pin is wrong!</p>';
     }
 
-    $startDate = new DateTime('2022-06-23');
-    $today = new DateTime();
-
-    $interval = date_diff($startDate, $today);
-    $daysSince = $interval->format('%a');
-    
-    $correctPin = str_pad($daysSince, 4, '0', STR_PAD_LEFT);
-    echo "<h2>$correctPin</h2>";
+    echo '<script src="js/pin.js"></script>';
 }
 
 echo '</body>';
