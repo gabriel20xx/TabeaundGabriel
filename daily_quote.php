@@ -7,7 +7,7 @@ $category = 'inspire';
 if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == date('Y-m-d')) {
     $quote = file_get_contents($quoteFilename);
 } else {
-    $apiUrl = 'http://api.theysaidso.com/qod.json?category=' . $inspire . '?key=' . $apiKey;
+    $apiUrl = 'https://quotes.rest/qod?category=' . $inspire . '?key=' . $apiKey;
     $response = file_get_contents($apiUrl);
     $data = json_decode($response, true);
 
