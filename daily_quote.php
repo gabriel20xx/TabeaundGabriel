@@ -61,6 +61,8 @@ if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == d
 
 if(!$failed) {
     echo $quote;
+} else {
+    echo 'Failed to display the daily quote.';
 }
 
 ?>
