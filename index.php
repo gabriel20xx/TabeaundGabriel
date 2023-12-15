@@ -107,8 +107,8 @@ if ($unlocked) {
         ["name" => "Diego", "message" => "Diegos Message"]
     ];
 
-    echo '<div class="d-none" id="envelopeContainer">';
     if ($isPastTargetDate) {
+        echo '<div class="d-none" id="envelopeContainer">';
         foreach ($data as $entry) {
             echo '<div class="frame">';
             echo '<div class="wrapper" onclick="toggleEnvelope(event)">';
@@ -122,18 +122,22 @@ if ($unlocked) {
             echo '</div>';
             echo '</div>';
         }
+        echo '</div>';
     } else {
+        echo '<div class="overlay d-none" id="envelopeContainer">';
+        echo '<div class="overlay-content">';
         echo "<p>Time left until 24th December 2023: " . $timeDifference->format('%R%a days, %H hours, %I minutes') . "</p>";
+        echo '</div>';
+        echo '</div>';
     }
-    echo '</div>';
 
-    
+
     // Star container
     echo '<div class="overlay d-none" id="starContainer">';
     echo '<div class="overlay-content">';
     echo '<blockquote>';
-    echo '<p>' ;
-    include ('includes/daily_quote.php');
+    echo '<p>';
+    include('includes/daily_quote.php');
     echo '</p>';
     echo '</blockquote>';
     echo '</div>';
@@ -149,7 +153,7 @@ if ($unlocked) {
     echo '<div class="input-group-append">';
     echo '<button class="btn btn-success" type="submit" name="add">Add</button>';
     echo '</div>';
-    include ('includes/wishlist.php');
+    include('includes/wishlist.php');
     echo '</div>';
     echo '</form>';
     echo '<p>Here is the next feature coming</p>';
