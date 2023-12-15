@@ -2,6 +2,7 @@
 
 $imageFolder = './img';
 $incorrect = false;
+$christmas = 
 
 if (is_dir($imageFolder)) {
     $imageCount = count(array_diff(scandir($imageFolder), ['.', '..']));
@@ -96,6 +97,11 @@ if ($unlocked) {
     echo '</div>';
 
     // Envelope container
+    $currentDateTime = new DateTime();
+    $targetDate = new DateTime('2023-12-24');
+    $timeDifference = $targetDate->diff($currentDateTime);
+    $isPastTargetDate = $currentDateTime > $targetDate;
+
     $data = [
         ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true."],
         ["name" => "Urs", "message" => "Urs Message"],
@@ -103,20 +109,25 @@ if ($unlocked) {
     ];
 
     echo '<div class="d-none" id="envelopeContainer">';
-    foreach ($data as $entry) {
-        echo '<div class="frame">';
-        echo '<div class="wrapper" onclick="toggleEnvelope(event)">';
-        echo '<div class="lid one"></div>';
-        echo '<div class="lid two"></div>';
-        echo '<div class="envelope"></div>';
-        echo '<div class="letter">';
-        echo '<p>' . $entry["message"] . '</p>';
-        echo '<p class="fst-italic">- ' . $entry["name"] . '</p>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
+    if ($isPastTargetDate) {
+        foreach ($data as $entry) {
+            echo '<div class="frame">';
+            echo '<div class="wrapper" onclick="toggleEnvelope(event)">';
+            echo '<div class="lid one"></div>';
+            echo '<div class="lid two"></div>';
+            echo '<div class="envelope"></div>';
+            echo '<div class="letter">';
+            echo '<p>' . $entry["message"] . '</p>';
+            echo '<p class="fst-italic">- ' . $entry["name"] . '</p>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+        }
+    } else {
+        echo "Time left until 24th December 2023: " . $timeDifference->format('%R%a days, %H hours, %I minutes') . PHP_EOL;
     }
     echo '</div>';
+
     
     // Star container
     echo '<div class="overlay d-none" id="starContainer">';
