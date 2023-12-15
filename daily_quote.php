@@ -41,7 +41,7 @@ function call_api($method, $url, $data = false, $api_key = null)
 }
 
 // Replace 'YOUR_API_KEY' with your actual API key
-$api_key = 'YOUR_API_KEY';
+$api_key = 'WfvXGr1LNov5Rgj19vzppLhAAhBTwlx43v1x0L9a';
 
 // They Said So API endpoint for a random quote with a specific category
 $qod_result = call_api("GET", "https://quotes.rest/qod?category=inspire", false, $api_key);
