@@ -140,7 +140,7 @@ if ($unlocked) {
 
     echo '<script src="js/fallanimation.js"></script>';
     echo '<script src="js/envelope.js"></script>';
-    echo '<script src="js/quoteotd.js"></script>';
+    echo '<script src="js/show-hide.js"></script>';
     echo '<script src="js/changebackground.js"></script>';
 } else {
     echo '<div class="container d-flex flex-column align-items-center justify-content-center text-center vh-100">';

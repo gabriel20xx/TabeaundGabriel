@@ -24,17 +24,3 @@ function toggleEnvelope(event) {
         wrapper.classList.remove('appear');
     }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Get the envelope button and the envelope containers
-    var envelopeButton = document.getElementById("envelopeButton");
-    var envelopeContainer = document.getElementById("envelopeContainer");
-    var frameContainer = document.getElementsByClassName("wrapper");
-
-    // Add click event listener to the envelope button
-    envelopeButton.addEventListener("click", function () {
-        envelopeContainer.classList.toggle("d-none");
-        frameContainer[current].classList.toggle("appear");
-        frameContainer[current].classList.toggle("d-none");
-    });
-});
