@@ -14,6 +14,7 @@ function toggleEnvelope(event) {
             }
 
             current++;
+            
         }, 2500);
     } else {
         wrapper.classList.add('active');
