@@ -42,6 +42,7 @@ function call_api($method, $url, $data = false, $api_key = null)
 
 $api_key = 'WfvXGr1LNov5Rgj19vzppLhAAhBTwlx43v1x0L9a';
 $category = 'inspire';
+$quoteFilename = 'daily-quote.txt';
 
 if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == date('Y-m-d')) {
     $quote = file_get_contents($quoteFilename);
@@ -50,6 +51,7 @@ if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == d
     $qod_data = json_decode($qod_result, true);
     if ($qod_data && isset($qod_data['contents']['quotes'][0]['quote'])) {
         $quote = $qod_data['contents']['quotes'][0]['quote'];
+        file_put_contents($quoteFilename, $quote);
     } else {
         echo 'Failed to fetch the daily quote.';
     }
