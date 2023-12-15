@@ -110,6 +110,8 @@ figure {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
     z-index: 2;
 }
 
