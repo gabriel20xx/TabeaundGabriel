@@ -121,7 +121,9 @@ if ($unlocked) {
     echo '<div class="overlay d-none" id="quoteContainer">';
     echo '<div class="overlay-content">';
     echo '<blockquote>';
-    echo '<p>' . include ('daily_quote.php') . '</p>';
+    echo '<p>' ;
+    include ('daily_quote.php');
+    echo '</p>';
     echo '</blockquote>';
     echo '</div>';
     echo '</div>';
