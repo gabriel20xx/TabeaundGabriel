@@ -107,6 +107,8 @@ figure {
     background-color: black;
     padding: 20px;
     border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
     max-width: 80%;
     max-height: 70%;
     display: flex;
