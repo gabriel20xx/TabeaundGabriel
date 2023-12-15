@@ -124,7 +124,7 @@ if ($unlocked) {
             echo '</div>';
         }
     } else {
-        echo "Time left until 24th December 2023: " . $timeDifference->format('%R%a days, %H hours, %I minutes') . PHP_EOL;
+        echo "<p>Time left until 24th December 2023: " . $timeDifference->format('%R%a days, %H hours, %I minutes') . "</p>";
     }
     echo '</div>';
 
