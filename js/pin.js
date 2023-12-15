@@ -10,5 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 input.blur();
             }
         });
+
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                var inputValue = input.value.trim();
+                if (!inputValue) {
+                    var prevInput = array[index - 1];
+                    if (prevInput) {
+                        prevInput.focus();
+                    }
+                }
+            }
+        });
     });
 });
