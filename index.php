@@ -118,8 +118,14 @@ if ($unlocked) {
     }
     echo '</div>';
 
-    echo '<div class="d-none" id="quoteContainer">';
-    include('daily_quote.php');
+   
+    
+    echo '<div class="overlay d-none" id="quoteContainer">';
+    echo '<div class="modal">';
+    echo '<blockquote>';
+    echo '<p>' . include ('daily_quote.php') . '</p>';
+    echo '</blockquote>';
+    echo '</div>';
     echo '</div>';
 
     echo '<footer>';

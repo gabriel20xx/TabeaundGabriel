@@ -60,9 +60,7 @@ if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == d
 }
 
 if(!$failed) {
-    echo '<blockquote>';
-    echo '<p>' . $quote . '</p>';
-    echo '</blockquote>';
+    echo $quote;
 }
 
 ?>
