@@ -50,12 +50,13 @@ if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == d
     $qod_data = json_decode($qod_result, true);
     if ($qod_data && isset($qod_data['contents']['quotes'][0]['quote'])) {
         $quote = $qod_data['contents']['quotes'][0]['quote'];
-        echo '<blockquote>';
-        echo '<p>' . $quote . '</p>';
-        echo '</blockquote>';
     } else {
         echo 'Failed to fetch the daily quote.';
     }
 }
+
+echo '<blockquote>';
+echo '<p>' . $quote . '</p>';
+echo '</blockquote>';
 
 ?>
