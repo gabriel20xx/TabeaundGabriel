@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var envelopeButton = document.getElementById("starButton");
-    var envelopeContainer = document.getElementById("quoteContainer");
-    envelopeButton.addEventListener("click", function () {
-        envelopeContainer.classList.toggle("d-none");
+    var starButton = document.getElementById("starButton");
+    var quoteContainer = document.getElementById("quoteContainer");
+    starButton.addEventListener("click", function () {
+        quoteContainer.classList.toggle("d-none");
     });
 
     var lockButton = document.getElementById("lockButton");
