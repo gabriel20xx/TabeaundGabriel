@@ -126,9 +126,13 @@ if ($unlocked) {
     echo '</div>';
     echo '</div>';
 
-    echo '<div class="overlay" id="lockContainer">';
-    echo '<div class="modal">';
+    echo '<div class="modal" id="lockContainer">';
+    echo '<div class="modal-dialog">';
+    echo '<div class="modal-content">';
+    echo '<div class="modal-body">';
     echo '<p>Here is the next feature coming</p>';
+    echo '</div>';
+    echo '</div>';
     echo '</div>';
     echo '</div>';
 
