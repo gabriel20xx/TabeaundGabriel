@@ -99,12 +99,12 @@ if ($unlocked) {
     $currentDateTime = new DateTime();
     $targetDate = new DateTime('2023-12-24');
     $timeDifference = $targetDate->diff($currentDateTime);
-    $isPastTargetDate = $currentDateTime > $targetDate;
+    $isPastTargetDate = $currentDateTime < $targetDate;
 
     $data = [
         ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true."],
-        ["name" => "Urs", "message" => "Urs Message"],
-        ["name" => "Diego", "message" => "Diegos Message"]
+        ["name" => "Urs", "message" => "Liebe Tabea/n Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂LG Papi"],
+        ["name" => "Diego", "message" => "Hey Schwöschterherz/n Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘"]
     ];
 
     if ($isPastTargetDate) {
@@ -126,7 +126,7 @@ if ($unlocked) {
     } else {
         echo '<div class="overlay d-none" id="envelopeContainer">';
         echo '<div class="overlay-content">';
-        echo "<p>Time left until 24th December 2023: " . $timeDifference->format('%R%a days, %H hours, %I minutes') . "</p>";
+        echo "<p>Time left until wishes becomes unlocked: " . $timeDifference->format('%a days, %H hours, %I minutes') . "</p>";
         echo '</div>';
         echo '</div>';
     }
