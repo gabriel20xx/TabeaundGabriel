@@ -125,7 +125,7 @@ figure {
     left: calc(50% - 300px / 2);
     display: flex;
     justify-content: center;
-    z-index: 10;
+    z-index: 2000;
 }
 
 .lid {
