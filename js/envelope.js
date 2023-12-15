@@ -11,13 +11,13 @@ function toggleEnvelope(event) {
 
         setTimeout(() => {
             wrapper.classList.remove('disappear');
+            wrapper.style.zIndex = zIndexBase - 1;
 
             if (current === frames.length) {
                 current = 1;
             }
 
             current++;
-            wrapper.style.zIndex = zIndexBase - 1;
         }, 2500);
     } else {
         wrapper.classList.add('active');
