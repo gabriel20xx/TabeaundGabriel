@@ -46,27 +46,42 @@ $quoteFilename = 'daily-quote.txt';
 $failed = false;
 
 if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == date('Y-m-d')) {
-    $quote = file_get_contents($quoteFilename);
+    $quoteData = json_decode(file_get_contents($quoteFilename), true);
+
+    // Check if the file contains the expected data structure
+    if ($quoteData && isset($quoteData['quote'], $quoteData['author'])) {
+        $quote = $quoteData['quote'];
+        $author = $quoteData['author'];
+    } else {
+        $failed = true;
+    }
 } else {
     $qod_result = call_api("GET", "https://quotes.rest/qod?category=" . $category, false, $api_key);
     $qod_data = json_decode($qod_result, true);
-    if ($qod_data && isset($qod_data['contents']['quotes'][0]['quote'])) {
+
+    if ($qod_data && isset($qod_data['contents']['quotes'][0]['quote'], $qod_data['contents']['quotes'][0]['author'])) {
         $quote = $qod_data['contents']['quotes'][0]['quote'];
-        file_put_contents($quoteFilename, $quote);
+        $author = $qod_data['contents']['quotes'][0]['author'];
+
+        // Save both quote and author to the file
+        $quoteData = ['quote' => $quote, 'author' => $author];
+        file_put_contents($quoteFilename, json_encode($quoteData));
     } else {
         $failed = true;
         echo 'Failed to fetch the daily quote.';
     }
 }
 
-if(!$failed) {
+if (!$failed) {
     echo '<figure class="blockquote">';
     echo '<blockquote>';
-    echo '<p>'. $quote. '</p>';
+    echo $quote;
     echo '</blockquote>';
     echo '<figcaption class="blockquote-footer">';
+    echo $author;
     echo '</figcaption>';
     echo '</figure>';
 }
+
 
 ?>
