@@ -2,11 +2,12 @@
 
 $apiKey = 'WfvXGr1LNov5Rgj19vzppLhAAhBTwlx43v1x0L9a';
 $quoteFilename = 'daily_quote.txt';
+$category = 'inspire';
 
 if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == date('Y-m-d')) {
     $quote = file_get_contents($quoteFilename);
 } else {
-    $apiUrl = 'http://api.theysaidso.com/qod.json?key=' . $apiKey;
+    $apiUrl = 'http://api.theysaidso.com/qod.json?category=' . $inspire . '?key=' . $apiKey;
     $response = file_get_contents($apiUrl);
     $data = json_decode($response, true);
 
