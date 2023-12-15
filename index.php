@@ -119,20 +119,16 @@ if ($unlocked) {
     echo '</div>';
     
     echo '<div class="overlay d-none" id="quoteContainer">';
-    echo '<div class="modal">';
+    echo '<div class="overlay-content">';
     echo '<blockquote>';
     echo '<p>' . include ('daily_quote.php') . '</p>';
     echo '</blockquote>';
     echo '</div>';
     echo '</div>';
 
-    echo '<div class="modal" id="lockContainer">';
-    echo '<div class="modal-dialog">';
-    echo '<div class="modal-content">';
-    echo '<div class="modal-body">';
+    echo '<div class="overlay" id="lockContainer">';
+    echo '<div class="overlay-content">';
     echo '<p>Here is the next feature coming</p>';
-    echo '</div>';
-    echo '</div>';
     echo '</div>';
     echo '</div>';
 
