@@ -3,12 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     pinInputs.forEach(function(input, index, array) {
         input.addEventListener('keydown', function(event) {
-            if (event.key === 'Return' || event.key === 'Enter') {
+            if (event.key === 'Enter') {
                 var inputValue = input.value.trim();
                 if (!inputValue) {
                     var prevInput = array[index - 1];
                     if (prevInput) {
                         prevInput.focus();
+                    }
+                } else {
+                    var form = input.closest('form');
+                    if (form) {
+                        form.submit();
                     }
                 }
             }
