@@ -99,11 +99,11 @@ if ($unlocked) {
     $currentDateTime = new DateTime();
     $targetDate = new DateTime('2023-12-24');
     $timeDifference = $targetDate->diff($currentDateTime);
-    $isPastTargetDate = $currentDateTime < $targetDate;
+    $isPastTargetDate = $currentDateTime > $targetDate;
 
     $data = [
         ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true."],
-        ["name" => "Urs", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂LG Papi"],
+        ["name" => "Papi", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂"],
         ["name" => "Diego", "message" => "Hey Schwöschterherz<br>Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘"]
     ];
 
@@ -135,11 +135,16 @@ if ($unlocked) {
     // Star container
     echo '<div class="overlay d-none" id="starContainer">';
     echo '<div class="overlay-content">';
+    echo '<h2>Daily Quote</h2>';
+    echo '<figure class="blockquote">';
     echo '<blockquote>';
     echo '<p>';
     include('includes/daily_quote.php');
     echo '</p>';
     echo '</blockquote>';
+    echo '<figcaption class="blockquote-footer">';
+    echo '</figcaption>';
+    echo '</figure>';
     echo '</div>';
     echo '</div>';
 
