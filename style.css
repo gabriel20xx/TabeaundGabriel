@@ -214,11 +214,12 @@ figure {
     transition-delay: 1s;
 }
 
+/*
 .appear {
     opacity: 1;
     animation: flyIn 1s linear;
 }
-
+*/
 
 
 @keyframes fall {
@@ -243,6 +244,7 @@ figure {
     }
 }
 
+/*
 @keyframes flyIn {
     0% {
         transform: translateX(150vw);
@@ -251,7 +253,7 @@ figure {
     100% {
         transform: translateX(50vw);
     }
-}
+}*/
 
 body> :nth-child(1) {
     animation-delay: 1s;
