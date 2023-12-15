@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
     $unlocked = false;
 }
 
+// Header
 echo '<!DOCTYPE html>';
 echo '<html lang="en" data-bs-theme="dark">';
 echo '<head>';
@@ -49,6 +50,7 @@ echo '</head>';
 echo '<body>';
 
 if ($unlocked) {
+    // Quote and images container
     $quotesAuthors = [
         ["quote" => "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.", "author" => "Angelita Lim"],
         ["quote" => "You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.", "author" => "Dr. Seuss"],
@@ -60,7 +62,6 @@ if ($unlocked) {
         ["quote" => "Take my hand, take my whole life too. For I can’t help falling in love with you.", "author" => "Elvis Presley"],
     ];
 
-    // Loop through both arrays based on specified iterations
     $x = 1;
     $y = 0;
     for ($i = 0; $i < count($quotesAuthors) + $imageCount; $i++) {
@@ -83,9 +84,9 @@ if ($unlocked) {
     }
 
 
+    // Button container
     $buttonClasses = ['star', 'lock', 'envelope', 'snow', 'heart'];
 
-    // Loop through the array to generate buttons
     echo '<div class="button-container">';
     foreach ($buttonClasses as $class) {
         echo '<button class="' . $class . '-btn" id="' . $class . 'Button">';
@@ -94,14 +95,13 @@ if ($unlocked) {
     }
     echo '</div>';
 
-
+    // Envelope container
     $data = [
         ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true."],
         ["name" => "Urs", "message" => "Urs Message"],
         ["name" => "Diego", "message" => "Diegos Message"]
     ];
 
-    // Loop through the array to generate carousel frames
     echo '<div class="d-none" id="envelopeContainer">';
     foreach ($data as $entry) {
         echo '<div class="frame">';
@@ -118,31 +118,45 @@ if ($unlocked) {
     }
     echo '</div>';
     
+    // Quote container
     echo '<div class="overlay d-none" id="quoteContainer">';
     echo '<div class="overlay-content">';
     echo '<blockquote>';
     echo '<p>' ;
-    include ('daily_quote.php');
+    include ('includes/daily_quote.php');
     echo '</p>';
     echo '</blockquote>';
     echo '</div>';
     echo '</div>';
 
+    // Lock container
     echo '<div class="overlay d-none" id="lockContainer">';
     echo '<div class="overlay-content">';
+    echo '<h2>My Wishlist</h2>';
+    echo ' <form action="" method="post">';
+    echo '<div class="input-group mb-3">';
+    echo '<input type="text" class="form-control" placeholder="Add an item to the wishlist" name="item" required>';
+    echo '<div class="input-group-append">';
+    echo '<button class="btn btn-success" type="submit" name="add">Add</button>';
+    echo '</div>';
+    echo '</div>';
+    echo '</form>';
     echo '<p>Here is the next feature coming</p>';
     echo '</div>';
     echo '</div>';
 
+    // Footer
     echo '<footer>';
     echo '<p class="text-center my-2">Made with ❤️ for my Soulmate</p>';
     echo '</footer>';
 
+    // JavaScript
     echo '<script src="js/fallanimation.js"></script>';
     echo '<script src="js/envelope.js"></script>';
     echo '<script src="js/show-hide.js"></script>';
     echo '<script src="js/changebackground.js"></script>';
 } else {
+    // Login container
     echo '<div class="container d-flex flex-column align-items-center justify-content-center text-center vh-100">';
     echo '<form id="pin_input" action="/index.php" method="post">';
     echo '<div class="container d-flex flex-column">';
@@ -163,6 +177,7 @@ if ($unlocked) {
 
     echo '</div>';
 
+    // JavaScript
     echo '<script src="js/pin.js"></script>';
 }
 
