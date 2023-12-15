@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         input.addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
+            if (event.key === 'Return' || event.key === 'Enter') {
                 var inputValue = input.value.trim();
                 if (!inputValue) {
                     var prevInput = array[index - 1];
