@@ -126,7 +126,7 @@ if ($unlocked) {
     echo '</div>';
     echo '</div>';
 
-    echo '<div class="overlay" id="lockContainer">';
+    echo '<div class="overlay d-none" id="lockContainer">';
     echo '<div class="overlay-content">';
     echo '<p>Here is the next feature coming</p>';
     echo '</div>';
