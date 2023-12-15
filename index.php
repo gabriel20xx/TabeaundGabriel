@@ -126,11 +126,10 @@ if ($unlocked) {
     } else {
         echo '<div class="overlay d-none" id="envelopeContainer">';
         echo '<div class="overlay-content">';
-        echo "<p>Time left until wishes becomes unlocked: " . $timeDifference->format('%a days, %H hours, %I minutes') . "</p>";
+        echo "<p>Time left until wishes becomes unlocked: <br>" . $timeDifference->format('%a days, %H hours, %I minutes') . "</p>";
         echo '</div>';
         echo '</div>';
     }
-
 
     // Star container
     echo '<div class="overlay d-none" id="starContainer">';
