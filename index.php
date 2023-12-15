@@ -103,8 +103,8 @@ if ($unlocked) {
 
     $data = [
         ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true."],
-        ["name" => "Urs", "message" => "Liebe Tabea/nIch wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂LG Papi"],
-        ["name" => "Diego", "message" => "Hey Schwöschterherz/nIch wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘"]
+        ["name" => "Urs", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂LG Papi"],
+        ["name" => "Diego", "message" => "Hey Schwöschterherz<br>Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘"]
     ];
 
     if ($isPastTargetDate) {
