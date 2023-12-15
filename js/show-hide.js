@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
     var starButton = document.getElementById("starButton");
-    var quoteContainer = document.getElementById("quoteContainer");
+    var starContainer = document.getElementById("starContainer");
     var lockButton = document.getElementById("lockButton");
     var lockContainer = document.getElementById("lockContainer");
     var envelopeButton = document.getElementById("envelopeButton");
     var envelopeContainer = document.getElementById("envelopeContainer");
 
     starButton.addEventListener("click", function () {
-        toggleContainer(quoteContainer);
+        toggleContainer(starContainer);
         hideOtherContainers([lockContainer, envelopeContainer]);
     });
 
     lockButton.addEventListener("click", function () {
         toggleContainer(lockContainer);
-        hideOtherContainers([quoteContainer, envelopeContainer]);
+        hideOtherContainers([starContainer, envelopeContainer]);
     });
 
     envelopeButton.addEventListener("click", function () {
         toggleContainer(envelopeContainer);
-        hideOtherContainers([quoteContainer, lockContainer]);
+        hideOtherContainers([starContainer, lockContainer]);
     });
 
     function toggleContainer(container) {

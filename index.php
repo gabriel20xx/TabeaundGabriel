@@ -118,8 +118,8 @@ if ($unlocked) {
     }
     echo '</div>';
     
-    // Quote container
-    echo '<div class="overlay d-none" id="quoteContainer">';
+    // Star container
+    echo '<div class="overlay d-none" id="starContainer">';
     echo '<div class="overlay-content">';
     echo '<blockquote>';
     echo '<p>' ;
@@ -133,12 +133,13 @@ if ($unlocked) {
     echo '<div class="overlay d-none" id="lockContainer">';
     echo '<div class="overlay-content">';
     echo '<h2>My Wishlist</h2>';
-    echo ' <form action="" method="post">';
+    echo '<form action="includes/wishlist.php" method="post">';
     echo '<div class="input-group mb-3">';
     echo '<input type="text" class="form-control" placeholder="Add an item to the wishlist" name="item" required>';
     echo '<div class="input-group-append">';
     echo '<button class="btn btn-success" type="submit" name="add">Add</button>';
     echo '</div>';
+    include ('includes/wishlist.php');
     echo '</div>';
     echo '</form>';
     echo '<p>Here is the next feature coming</p>';
