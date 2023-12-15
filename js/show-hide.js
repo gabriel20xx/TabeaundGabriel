@@ -8,19 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     starButton.addEventListener("click", function () {
         toggleContainer(quoteContainer);
-
-        hideOtherContainers([envelopeContainer, lockContainer]);
+        hideOtherContainers([lockContainer, envelopeContainer]);
     });
 
     lockButton.addEventListener("click", function () {
         toggleContainer(lockContainer);
-
         hideOtherContainers([quoteContainer, envelopeContainer]);
     });
 
     envelopeButton.addEventListener("click", function () {
         toggleContainer(envelopeContainer);
-        
         hideOtherContainers([quoteContainer, lockContainer]);
     });
 
@@ -30,7 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function hideOtherContainers(containers) {
         containers.forEach(function (container) {
-            container.classList.add("d-none");
+            if (!container.classList.contains("d-none")) {
+                container.classList.add("d-none");
+            }
         });
     }
 });
