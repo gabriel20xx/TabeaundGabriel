@@ -1,6 +1,7 @@
 <?php
 
 $imageFolder = './img';
+$incorrect = false;
 
 if (is_dir($imageFolder)) {
     $imageCount = count(array_diff(scandir($imageFolder), ['.', '..']));
