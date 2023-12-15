@@ -17,7 +17,7 @@ function toggleEnvelope(event) {
             }
 
             current++;
-            wrapper.style.zIndex = zIndexBase - frames.length;
+            wrapper.style.zIndex = zIndexBase - frames.length + current;
         }, 2500);
     } else {
         wrapper.classList.add('active');
