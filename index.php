@@ -136,15 +136,7 @@ if ($unlocked) {
     echo '<div class="overlay d-none" id="starContainer">';
     echo '<div class="overlay-content">';
     echo '<h2>Daily Quote</h2>';
-    echo '<figure class="blockquote">';
-    echo '<blockquote>';
-    echo '<p>';
     include('includes/daily_quote.php');
-    echo '</p>';
-    echo '</blockquote>';
-    echo '<figcaption class="blockquote-footer">';
-    echo '</figcaption>';
-    echo '</figure>';
     echo '</div>';
     echo '</div>';
 
