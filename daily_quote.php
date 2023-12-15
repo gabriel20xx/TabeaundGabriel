@@ -43,6 +43,7 @@ function call_api($method, $url, $data = false, $api_key = null)
 $api_key = 'WfvXGr1LNov5Rgj19vzppLhAAhBTwlx43v1x0L9a';
 $category = 'inspire';
 $quoteFilename = 'daily-quote.txt';
+$failed = false;
 
 if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == date('Y-m-d')) {
     $quote = file_get_contents($quoteFilename);
@@ -53,12 +54,15 @@ if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == d
         $quote = $qod_data['contents']['quotes'][0]['quote'];
         file_put_contents($quoteFilename, $quote);
     } else {
+        $failed = true;
         echo 'Failed to fetch the daily quote.';
     }
 }
 
-echo '<blockquote>';
-echo '<p>' . $quote . '</p>';
-echo '</blockquote>';
+if(!$failed) {
+    echo '<blockquote>';
+    echo '<p>' . $quote . '</p>';
+    echo '</blockquote>';
+}
 
 ?>
