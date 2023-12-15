@@ -29,7 +29,7 @@ figure {
     align-items: center;
     width: 100vw;
     position: fixed;
-    bottom: 15px;
+    bottom: 20px;
     z-index: 3;
 }
 
