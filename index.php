@@ -118,7 +118,9 @@ if ($unlocked) {
     }
     echo '</div>';
 
+    echo '<div class="d-none" id="quoteContainer">';
     include('daily_quote.php');
+    echo '</div>';
 
     echo '<footer>';
     echo '<p class="text-center my-2">Made with ❤️ for my Soulmate</p>';

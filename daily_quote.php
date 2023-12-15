@@ -15,13 +15,13 @@ function call_api($method, $url, $data = false, $api_key = null)
             curl_setopt($curl, CURLOPT_PUT, 1);
             break;
         default:
-        if ($data) {
-            if (!is_array($data)) {
-                die('Error: $data should be an array.');
+            if ($data) {
+                if (!is_array($data)) {
+                    die('Error: $data should be an array.');
+                }
+
+                $url .= '?' . http_build_query($data);
             }
-        
-            $url .= '?' . http_build_query($data);
-        }
     }
 
     $headers = ['Content-Type: application/json'];
