@@ -188,7 +188,6 @@ figure {
     color: #3B4049;
 }
 
-
 .wrapper.active .lid.one {
     transform: rotateX(90deg);
     transition-delay: 0s;
