@@ -113,8 +113,8 @@ if ($unlocked) {
     foreach ($data as $entry) {
         echo '<div class="frame">';
         echo '<div class="wrapper" style="background-color: ' . $entry['color1'] . '" onclick="toggleEnvelope(event)">';
-        echo '<div class="lid one" style="background-color: ' . $entry['color2'] . '" ></div>';
-        echo '<div class="lid two" style="background-color: ' . $entry['color1'] . '" ></div>';
+        echo '<div class="lid one" style="border-top: ' . $entry['color2'] . '" ></div>';
+        echo '<div class="lid two" style="border-top: ' . $entry['color1'] . '" ></div>';
         echo '<div class="envelope" style="border-right: ' . $entry['color3'] . ', border-bottom: ' . $entry['color3'] . ', border-left: ' . $entry['color3'] . '" ></div>';
         echo '<div class="letter">';
         echo '<p>' . $entry['message'] . '</p>';
