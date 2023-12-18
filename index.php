@@ -100,9 +100,9 @@ if ($unlocked) {
         // Mami
         ["name" => "Papi", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂", "color1" => "#fdc500", "color2" => "#ffd500", "color3" => "#ffee32"],
         ["name" => "Diego", "message" => "Hey Schwöschterherz<br>Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
-        ["name" => "Roxy", "message" => "Liebi Tabea, für mi bisch du über die jahr wie zure chline schwöster worde. lg bi so stouz uf di wie du di am witerentwickle bisch und bi immer da faus du mi bruchsch!❤️", "color1" => "#023e8a", "color2" => "#0077b6", "color3" => "#0096c7"],
+        ["name" => "Roxy", "message" => "Liebi Tabea, für mi bisch du über die jahr wie zure chline schwöster worde. Ig bi so stouz uf di wie du di am witer- entwickle bisch und bi immer da faus du mi bruchsch!❤️", "color1" => "#023e8a", "color2" => "#0077b6", "color3" => "#0096c7"],
         // Hanna
-        ["name" => "Alina", "message" => "Du bisch mir as Herz gwachse, ich schätze eusi Frünschaft und wünsche Dir viel liebi im neue Jahr❤️", "color1" => "#38419D", "color2" => "#3887BE", "color3" => "#52D3D8"],
+        ["name" => "Alina", "message" => "Du bisch mir as Herz gwachse, ich schätze eusi SFrünschaft und wünsche Dir viel liebi im neue Jahr❤️", "color1" => "#38419D", "color2" => "#3887BE", "color3" => "#52D3D8"],
         ["name" => "Jeremy", "message" => "Ich kenn dich jetzt au scho es zitli, bisch en sehr tolle Mensch, blieb so wied bisch 🙂", "color1" => "#236969", "color2" => "#43A680", "color3" => "#74F6A7"],
         ["name" => "Sophia", "message" => "Du bisch min Sunneschii, 20 Jahr han ich dich a minere Sitte kah und hoffe uf witeri 100 Jahr mit dir! I love You!", "color1" => "#ad2bcc", "color2" => "#ba55d3", "color3" => "#c9a0dc"],
         ["name" => "Shereen", "message" => "I bin so froh, dass ich dich han dörfe kennelerne, bisch so eh tolli und liebi Person. Bisch mir mega wichtig❤️", "color1" => "#9d0208", "color2" => "#d00000", "color3" => "#dc2f02"],
