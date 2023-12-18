@@ -94,41 +94,36 @@ if ($unlocked) {
     }
     echo '</div>';
 
-    // Envelope container
-    $currentDateTime = new DateTime();
-    $targetDate = new DateTime('2023-12-24');
-    $timeDifference = $targetDate->diff($currentDateTime);
-    $isPastTargetDate = $currentDateTime > $targetDate;
-
     $data = [
-        ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true."],
-        ["name" => "Papi", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂"],
-        ["name" => "Diego", "message" => "Hey Schwöschterherz<br>Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘"]
+        ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true.", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
+        // Margarita / Mami
+        ["name" => "Papi", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
+        ["name" => "Diego", "message" => "Hey Schwöschterherz<br>Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
+        // Roxy
+        // Hanna
+        ["name" => "Alina", "message" => "Du bisch mir as Herz gwachse, ich schätze eusi Frünschaft und wünsche Dir viel liebi im neue Jahr❤️", "color1" => "#38419D", "color2" => "#3887BE", "color3" => "#52D3D8"],
+        ["name" => "Jeremy", "message" => "Ich kenn dich jetzt au scho es zitli, bisch en sehr tolle Mensch, blieb so wied bisch 🙂", "color1" => "#236969", "color2" => "#43A680", "color3" => "#74F6A7"],
+        ["name" => "Sophia", "message" => "Du bisch min Sunneschii, 20 Jahr han ich dich a minere Sitte kah und hoffe uf witeri 100 Jahr mit dir! I love You!", "color1" => "#ad2bcc", "color2" => "#ba55d3", "color3" => "#c9a0dc"],
+        ["name" => "Shereen", "message" => "I bin so froh, dass ich dich han dörfe kennelerne, bisch so eh tolli und liebi Person. Bisch mir mega wichtig❤️", "color1" => "#9d0208", "color2" => "#d00000", "color3" => "#dc2f02"],
+        ["name" => "Larissa", "message" => "La mas linda del mundo! Te quiero tanto prima❤️", "color1" => "#ddbea9", "color2" => "#ffe8d6", "color3" => "#b7b7a4"],
+        ["name" => "Romano", "message" => "Ig cha gar nii so richtig fasse, das du mir üs glich scho es zitli kenne. Ig schetze üsi Frünsdschaft sehr und bi mega dankbar für aues", "color1" => "#0080ff", "color2" => "#00bfff", "color3" => "#00ffff"],
     ];
 
-    if ($isPastTargetDate) {
-        echo '<div class="d-none" id="envelopeContainer">';
-        foreach ($data as $entry) {
-            echo '<div class="frame">';
-            echo '<div class="wrapper" onclick="toggleEnvelope(event)">';
-            echo '<div class="lid one"></div>';
-            echo '<div class="lid two"></div>';
-            echo '<div class="envelope"></div>';
-            echo '<div class="letter">';
-            echo '<p>' . $entry['message'] . '</p>';
-            echo '<p class="fst-italic">- ' . $entry['name'] . '</p>';
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-        }
+    echo '<div class="d-none" id="envelopeContainer">';
+    foreach ($data as $entry) {
+        echo '<div class="frame">';
+        echo '<div class="wrapper" style="background-color: ' . $entry['color1'] . '" onclick="toggleEnvelope(event)">';
+        echo '<div class="lid one" style="background-color: ' . $entry['color2'] . '" ></div>';
+        echo '<div class="lid two" style="background-color: ' . $entry['color1'] . '" ></div>';
+        echo '<div class="envelope" style="border-right: ' . $entry['color3'] . ', border-bottom: ' . $entry['color3'] . '" ></div>';
+        echo '<div class="letter">';
+        echo '<p>' . $entry['message'] . '</p>';
+        echo '<p class="fst-italic">- ' . $entry['name'] . '</p>';
         echo '</div>';
-    } else {
-        echo '<div class="overlay d-none" id="envelopeContainer">';
-        echo '<div class="overlay-content">';
-        echo "<p>Time left until wishes becomes unlocked: <br>" . $timeDifference->format('%a days, %H hours, %I minutes') . "</p>";
         echo '</div>';
         echo '</div>';
     }
+    echo '</div>';
 
     // Star container
     echo '<div class="overlay d-none" id="starContainer">';
