@@ -98,7 +98,7 @@ if ($unlocked) {
     $data = [
         ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true.", "color1" => "#0000ff", "color2" => "#ff9500", "color3" => "#00ffff"],
         // Mami
-        ["name" => "Papi", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
+        ["name" => "Papi", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂", "color1" => "#fdc500", "color2" => "#ffd500", "color3" => "#ffee32"],
         ["name" => "Diego", "message" => "Hey Schwöschterherz<br>Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
         ["name" => "Roxy", "message" => "Liebi Tabea, für mi bisch du über die jahr wie zure chline schwöster worde. lg bi so stouz uf di wie du di am witerentwickle bisch und bi immer da faus du mi bruchsch!❤️", "color1" => "#023e8a", "color2" => "#0077b6", "color3" => "#0096c7"],
         // Hanna
