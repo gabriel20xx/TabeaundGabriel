@@ -144,7 +144,7 @@ figure {
 
 /* Lid when closed */
 .lid.one {
-    border-top: 100px solid; /* Color2 */
+    /* Color2 */
     transform: rotateX(0deg);
     z-index: 30;
     transition-delay: 0.75s;
@@ -152,7 +152,7 @@ figure {
 
 /* Lid when opened */
 .lid.two {
-    border-top: 100px solid; /* Color1 */
+    /* Color1 */
     transform: rotateX(90deg);
     z-index: 11;
     transition-delay: 0.5s;
@@ -165,9 +165,9 @@ figure {
     top: 0;
     left: 0;
     border-top: 100px solid transparent;
-    border-right: 150px solid; /* Color3 */
-    border-bottom: 100px solid; /* Color3 */
-    border-left: 150px solid;
+    /*border-right: 150px solid; /* Color3 */
+    /*border-bottom: 100px solid; /* Color3 */
+    /*border-left: 150px solid;*/
     z-index: 30;
 }
 
