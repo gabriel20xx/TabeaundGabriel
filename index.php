@@ -94,6 +94,7 @@ if ($unlocked) {
     }
     echo '</div>';
 
+    // Envelope container
     $data = [
         ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true.", "color1" => "#3760C9", "color2" => "#658ced", "color3" => "#C4DFF0"],
         // Margarita / Mami
@@ -112,10 +113,10 @@ if ($unlocked) {
     echo '<div class="d-none" id="envelopeContainer">';
     foreach ($data as $entry) {
         echo '<div class="frame">';
-        echo '<div class="wrapper" style="background-color: ' . $entry['color1'] . '" onclick="toggleEnvelope(event)">';
-        echo '<div class="lid one" style="border-top: ' . $entry['color2'] . '" ></div>';
-        echo '<div class="lid two" style="border-top: ' . $entry['color1'] . '" ></div>';
-        echo '<div class="envelope" style="border-right: ' . $entry['color3'] . ', border-bottom: ' . $entry['color3'] . ', border-left: ' . $entry['color3'] . '" ></div>';
+        echo '<div class="wrapper" style="background-color: ' . $entry['color1'] . ';" onclick="toggleEnvelope(event)">';
+        echo '<div class="lid one" style="border-top: ' . $entry['color2'] . ';" ></div>';
+        echo '<div class="lid two" style="border-top: ' . $entry['color1'] . ';" ></div>';
+        echo '<div class="envelope" style="border-right: ' . $entry['color3'] . '; border-bottom: ' . $entry['color3'] . '; border-left: ' . $entry['color3'] . ';" ></div>';
         echo '<div class="letter">';
         echo '<p>' . $entry['message'] . '</p>';
         echo '<p class="fst-italic">- ' . $entry['name'] . '</p>';
