@@ -183,9 +183,15 @@ figure {
     transition: 0.5s;
 }
 
-.letter p {
+.letter .message {
     text-align: center;
     margin: 10px;
+    color: #3B4049;
+}
+
+.letter .name {
+    text-align: center;
+    margin: 0;
     color: #3B4049;
 }
 

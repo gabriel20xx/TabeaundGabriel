@@ -118,8 +118,8 @@ if ($unlocked) {
         echo '<div class="lid two" style="border-top: 100px solid ' . $entry['color3'] . ';" ></div>';
         echo '<div class="envelope" style="border-right: 150px solid ' . $entry['color1'] . '; border-bottom: 100px solid' . $entry['color1'] . '; border-left: 150px solid' . $entry['color1'] . '; " ></div>';
         echo '<div class="letter">';
-        echo '<p>' . $entry['message'] . '</p>';
-        echo '<p class="fst-italic">- ' . $entry['name'] . '</p>';
+        echo '<p class="message">' . $entry['message'] . '</p>';
+        echo '<p class="fst-italic name">- ' . $entry['name'] . '</p>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
