@@ -167,7 +167,7 @@ figure {
     border-top: 100px solid transparent;
     /*border-right: 150px solid; /* Color3 */
     /*border-bottom: 100px solid; /* Color3 */
-    /*border-left: 150px solid;*/
+    /*border-left: 150px solid; /* Color1 */
     z-index: 30;
 }
 
