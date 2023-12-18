@@ -111,7 +111,7 @@ if ($unlocked) {
     ];
 
     echo '<div class="d-none" id="envelopeContainer">';
-    foreach ($data as $entry) {
+    foreach (array_reverse($data) as $entry) {
         echo '<div class="frame">';
         echo '<div class="wrapper" style="background-color: ' . $entry['color1'] . ';" onclick="toggleEnvelope(event)">';
         echo '<div class="lid one" style="border-top: 100px solid ' . $entry['color2'] . ';" ></div>';
