@@ -6,7 +6,7 @@ function validatePassword() {
     if (password === correctPassword) {
         // If the password is correct, show the message container
         document.getElementById("messageContainer").style.display = "block";
-        document.getElementById("messageContainer").classList.remove(d-none);
+        document.getElementById("messageContainer").classList.remove("d-none");
         // Hide the password container
         document.querySelector(".password-container").style.display = "none";
     } else {
