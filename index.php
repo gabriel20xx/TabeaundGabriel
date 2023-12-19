@@ -84,7 +84,7 @@ if ($unlocked) {
     }
 
     // Button container
-    $buttonClasses = ['snow', 'lock', 'envelope', /*'star',*/ 'heart'];
+    $buttonClasses = ['snow', 'lock', 'envelope', 'star', 'heart'];
 
     echo '<div class="button-container">';
     foreach ($buttonClasses as $class) {
