@@ -156,12 +156,12 @@ if ($unlocked) {
     echo '<div class="overlay-content">';
     echo '<div class="container d-none" id="messageContainer">';
     echo '<h2>Random Message Generator</h2>';
-    echo '<p id="randomMessage">Press the button to get a random message!</p>';
+    echo '<p id="randomMessage" class="m-2">Press the button to get a random message!</p>';
     echo '<button onclick="getRandomMessage()">Get Random Message</button>';
     echo '</div>';
     echo '<div class="password-container">';
     echo '<label for="password">Enter Password:</label>';
-    echo '<input class="p-1" type="password" id="password" />';
+    echo '<input class="m-1" type="password" id="password" />';
     echo '<button onclick="validatePassword()">Submit</button>';
     echo ' </div>';
     echo '</div>';
