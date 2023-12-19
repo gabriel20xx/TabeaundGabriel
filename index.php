@@ -101,7 +101,7 @@ if ($unlocked) {
         ["name" => "Papi", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂", "color1" => "#fdc500", "color2" => "#ffd500", "color3" => "#ffee32"],
         ["name" => "Diego", "message" => "Hey Schwöschterherz<br>Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
         ["name" => "Roxy", "message" => "Liebi Tabea, für mi bisch du über die jahr wie zure chline schwöster worde. Ig bi so stouz uf di wie du di am witer- entwickle bisch und bi immer da faus du mi bruchsch!❤️", "color1" => "#023e8a", "color2" => "#0077b6", "color3" => "#0096c7"],
-        ["name" => "Hanna", "message" => "", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
+        ["name" => "Hanna", "message" => "", "color1" => "#4361ee", "color2" => "#3a0ca3", "color3" => "#4cc9f0"],
         ["name" => "Alina", "message" => "Du bisch mir as Herz gwachse, ich schätze eusi SFrünschaft und wünsche Dir viel liebi im neue Jahr❤️", "color1" => "#38419D", "color2" => "#3887BE", "color3" => "#52D3D8"],
         ["name" => "Jeremy", "message" => "Ich kenn dich jetzt au scho es zitli, bisch en sehr tolle Mensch, blieb so wied bisch 🙂", "color1" => "#236969", "color2" => "#43A680", "color3" => "#74F6A7"],
         ["name" => "Sophia", "message" => "Du bisch min Sunneschii, 20 Jahr han ich dich a minere Sitte kah und hoffe uf witeri 100 Jahr mit dir! I love You!", "color1" => "#ad2bcc", "color2" => "#ba55d3", "color3" => "#c9a0dc"],
@@ -117,7 +117,7 @@ if ($unlocked) {
         echo '<div class="lid one" style="border-top: 100px solid ' . $entry['color2'] . ';" ></div>';
         echo '<div class="lid two" style="border-top: 100px solid ' . $entry['color3'] . ';" ></div>';
         echo '<div class="envelope" style="border-right: 150px solid ' . $entry['color1'] . '; border-bottom: 100px solid' . $entry['color1'] . '; border-left: 150px solid' . $entry['color1'] . '; " ></div>';
-        echo '<div class="letter d-flex flex-column justify-content-between mb-1">';
+        echo '<div class="letter d-flex flex-column justify-content-between m-1">';
         echo '<p class="message">' . $entry['message'] . '</p>';
         echo '<p class="fst-italic name">- ' . $entry['name'] . '</p>';
         echo '</div>';
