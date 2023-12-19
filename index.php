@@ -161,7 +161,7 @@ if ($unlocked) {
     echo '</div>';
     echo '<div class="password-container">';
     echo '<label class="form-label" for="password">Enter Password:</label>';
-    echo '<input class="form-control" type="password" id="password" />';
+    echo '<input class="form-control mb-2" type="password" id="password" />';
     echo '<button class="btn btn-primary" onclick="validatePassword()">Submit</button>';
     echo ' </div>';
     echo '</div>';
