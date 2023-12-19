@@ -1,7 +1,7 @@
 function validatePassword() {
     // Replace 'your_password' with the actual password
     var password = document.getElementById("password").value;
-    var correctPassword = "your_password"; // Replace with your actual password
+    var correctPassword = "KinkyGame"; // Replace with your actual password
 
     if (password === correctPassword) {
         // If the password is correct, show the message container
