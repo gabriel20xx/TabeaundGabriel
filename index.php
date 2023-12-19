@@ -96,7 +96,7 @@ if ($unlocked) {
 
     // Envelope container
     $data = [
-        ["name" => "Gabriel", "message" => "You are the best person on earth. I love you with every heartbeat. I wish you the best. Make your wishes come true.", "color1" => "#0000ff", "color2" => "#ff9500", "color3" => "#00ffff"],
+        ["name" => "Gabriel", "message" => "Ich bin unfassbar dankbar bisch du i mis läbe cho🥰 Du bisch di beschti Person uf dere Welt und bisch mis allerwichtigschte. Ich chan es läbe ohni dich ned vorstelle❤️‍🔥", "color1" => "#0000ff", "color2" => "#ff9500", "color3" => "#00ffff"],
         ["name" => "Mami", "message" => "", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
         ["name" => "Papi", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂", "color1" => "#fdc500", "color2" => "#ffd500", "color3" => "#ffee32"],
         ["name" => "Diego", "message" => "Hey Schwöschterherz<br>Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
