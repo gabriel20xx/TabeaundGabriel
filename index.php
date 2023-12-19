@@ -84,7 +84,7 @@ if ($unlocked) {
     }
 
     // Button container
-    $buttonClasses = ['snow', 'lock', 'envelope', 'star', 'heart'];
+    $buttonClasses = ['snow', 'lock', 'envelope', /*'star',*/ 'heart'];
 
     echo '<div class="button-container">';
     foreach ($buttonClasses as $class) {
@@ -135,6 +135,7 @@ if ($unlocked) {
     echo '</div>';
 
     // Lock container
+    /*
     echo '<div class="overlay d-none" id="lockContainer">';
     echo '<div class="overlay-content">';
     echo '<h2>My Wishlist</h2>';
@@ -149,6 +150,21 @@ if ($unlocked) {
     echo '</form>';
     echo '<p>Here is the next feature coming</p>';
     echo '</div>';
+    echo '</div>';*/
+
+    echo '<div class="overlay d-none" id="lockContainer">';
+    echo '<div class="overlay-content">';
+    echo '<div class="container" id="messageContainer"';
+    echo '<h2>Random Message Generator</h2>';
+    echo '<p id="randomMessage">Press the button to get a random message!</p>';
+    echo '<button onclick="getRandomMessage()">Get Random Message</button>';
+    echo '</div>';
+    echo '<div class="password-container">';
+    echo '<label for="password">Enter Password:</label>';
+    echo '<input type="password" id="password" />';
+    echo '<button onclick="validatePassword()">Submit</button>';
+    echo ' </div>';
+    echo '</div>';
     echo '</div>';
 
     // Footer
@@ -161,6 +177,7 @@ if ($unlocked) {
     echo '<script src="js/envelope.js"></script>';
     echo '<script src="js/show-hide.js"></script>';
     echo '<script src="js/changebackground.js"></script>';
+    echo '<script src="js/lock.js"></script>';
 } else {
     // Login container
     echo '<div class="container d-flex flex-column align-items-center justify-content-center text-center vh-100">';
