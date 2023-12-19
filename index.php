@@ -156,7 +156,7 @@ if ($unlocked) {
     echo '<div class="overlay-content">';
     echo '<div class="container d-none" id="messageContainer">';
     echo '<h2 class="form-label">Your Dare</h2>';
-    echo '<p id="randomMessage" class="m-2 text-success">Press the button to get a random dare!</p>';
+    echo '<h3 id="randomMessage" class="m-4 text-success">Press the button to get a random dare!</h3>';
     echo '<button class="btn btn-primary" onclick="getRandomMessage()">Get Random Message</button>';
     echo '</div>';
     echo '<div class="password-container">';
