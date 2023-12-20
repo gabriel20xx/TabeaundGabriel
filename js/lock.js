@@ -80,6 +80,29 @@ var currentMessageIndex;
 
     function getNewMessage() {
         // Reset the timer and get a new message
+        var btncheck1 = document.getElementById("btncheck1");
+        if (btncheck1.checked) {
+            console.log("btncheck1 is checked");
+        } else {
+            console.log("btncheck1 is not checked");
+        }
+    
+        // Check if btncheck2 is checked
+        var btncheck2 = document.getElementById("btncheck2");
+        if (btncheck2.checked) {
+            console.log("btncheck2 is checked");
+        } else {
+            console.log("btncheck2 is not checked");
+        }
+    
+        // Check if btncheck3 is checked
+        var btncheck3 = document.getElementById("btncheck3");
+        if (btncheck3.checked) {
+            console.log("btncheck3 is checked");
+        } else {
+            console.log("btncheck3 is not checked");
+        }
+        
         clearInterval(timer);
         timer = null;
         timerRunning = false;
