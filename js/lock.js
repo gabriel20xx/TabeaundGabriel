@@ -17,12 +17,12 @@ function validatePassword() {
 function getRandomMessage() {
     // Array of random messages
     var messages = [
-        "Hello, world!",
-        "Coding is fun!",
-        "Keep calm and code on.",
-        "Random message generator activated!",
-        "May the code be with you.",
-        "Programming is an art."
+        "Kiss each other passionately.",
+        "Touch each other on the body.",
+        "Masturbate each others genital slowly.",
+        "Make love to each other.",
+        "Tickle each other with a feather.",
+        "Suck each others genitals.",
     ];
 
     // Get a random index
