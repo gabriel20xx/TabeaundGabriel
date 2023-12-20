@@ -73,6 +73,8 @@ var currentMessageIndex;
     function updateButtonText() {
         var button = document.getElementById("startPauseButton");
         button.innerText = timerRunning ? "Pause Timer" : "Start Timer";
+        button.classList.toggle("btn-success");
+        button.classList.toggle("btn-danger");
     }
 
     function getNewMessage() {
