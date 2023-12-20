@@ -14,19 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
     starButton.addEventListener("click", function () {
         toggleContainer(starContainer);
         hideOtherContainers([lockContainer, envelopeContainer]);
-        toggleButton("starButton", "darkorange", "orange", starEnabled);
+        if (starEnabled) {
+            toggleButton("starButton", "darkorange", "orange", starEnabled);
+        }
     });
 
     lockButton.addEventListener("click", function () {
         toggleContainer(lockContainer);
         hideOtherContainers([starContainer, envelopeContainer]);
-        toggleButton("lockButton", "darkmagenta", "magenta", lockEnabled);
+        if (lockEnabled) {
+            toggleButton("lockButton", "darkmagenta", "magenta", lockEnabled);
+        }
     });
 
     envelopeButton.addEventListener("click", function () {
         toggleContainer(envelopeContainer);
         hideOtherContainers([starContainer, lockContainer]);
-        toggleButton("envelopeButton", "black", "gray", envelopeEnabled);
+        if (envelopeEnabled) {
+            toggleButton("envelopeButton", "black", "gray", envelopeEnabled);
+        }
     });
 
     heartButton.addEventListener("click", function () {
