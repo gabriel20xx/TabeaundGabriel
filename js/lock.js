@@ -70,6 +70,3 @@ function getNewMessage() {
     getRandomMessage();
     updateTimerDisplay();
 }
-
-// Display initial random message
-getRandomMessage();
