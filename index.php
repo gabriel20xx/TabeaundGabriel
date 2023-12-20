@@ -160,6 +160,14 @@ if ($unlocked) {
     echo '<p id="timer"></p>';
     echo '<button id="startPauseButton" class="btn btn-success mb-2 d-none" onclick="startPauseTimer()">Start Timer</button>';
     echo '<button class="btn btn-primary" onclick="getNewMessage()">Get New Message</button>';
+    echo '<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">';
+    echo '<input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">';
+    echo '<label class="btn btn-outline-primary" for="btncheck1">Feather</label>';
+    echo '<input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">';
+    echo '<label class="btn btn-outline-primary" for="btncheck2">Vibrator</label>';
+    echo '<input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">';
+    echo '<label class="btn btn-outline-primary" for="btncheck3">Handcuffs</label>';
+    echo '</div>';
     echo '</div>';
     echo '<div class="password-container">';
     echo '<label class="form-label" for="password">Enter Password:</label>';

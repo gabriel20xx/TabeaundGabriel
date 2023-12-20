@@ -14,16 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
     starButton.addEventListener("click", function () {
         toggleContainer(starContainer);
         hideOtherContainers([lockContainer, envelopeContainer]);
+        toggleButton("starButton", "darkorange", "orange", starEnabled);
     });
 
     lockButton.addEventListener("click", function () {
         toggleContainer(lockContainer);
         hideOtherContainers([starContainer, envelopeContainer]);
+        toggleButton("lockButton", "darkmagenta", "magenta", lockEnabled);
     });
 
     envelopeButton.addEventListener("click", function () {
         toggleContainer(envelopeContainer);
         hideOtherContainers([starContainer, lockContainer]);
+        toggleButton("envelopeButton", "black", "gray", envelopeEnabled);
     });
 
     heartButton.addEventListener("click", function () {
@@ -37,16 +40,17 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleContainer(container) {
         container.classList.toggle("d-none");
         resetButtonColors();
-        // if container is visible change the button for its container from blue to red and all other buttons to their initial colors
+
+
     }
 
     function hideOtherContainers(containers) {
+        resetButtonColors();
         containers.forEach(function (container) {
             if (!container.classList.contains("d-none")) {
                 container.classList.add("d-none");
             }
         });
-        resetButtonColors();
     }
 
     function resetButtonColors() {
