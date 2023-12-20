@@ -24,49 +24,63 @@ var messages = [
 ];
 
 var currentMessageIndex;
-var timer;
-var timeRemaining;
+    var timer;
+    var timeRemaining;
+    var timerRunning = false;
 
-function getRandomMessage() {
-    // Get a random index
-    currentMessageIndex = Math.floor(Math.random() * messages.length);
+    function getRandomMessage() {
+        // Get a random index
+        currentMessageIndex = Math.floor(Math.random() * messages.length);
 
-    // Display the random message
-    document.getElementById("randomMessage").innerText = messages[currentMessageIndex].text;
+        // Display the random message
+        document.getElementById("randomMessage").innerText = messages[currentMessageIndex].text;
 
-    // Display initial time
-    timeRemaining = messages[currentMessageIndex].time;
-    updateTimerDisplay();
-}
+        // Display initial time
+        timeRemaining = messages[currentMessageIndex].time;
+        updateTimerDisplay();
+    }
 
-function startTimer() {
-    if (timer) {
-        // Pause the timer if it's already running
+    function startPauseTimer() {
+        if (timerRunning) {
+            // Pause the timer if it's already running
+            clearInterval(timer);
+            timer = null;
+            timerRunning = false;
+        } else {
+            // Start the timer
+            timer = setInterval(function () {
+                timeRemaining--;
+                updateTimerDisplay();
+                if (timeRemaining <= 0) {
+                    clearInterval(timer);
+                    timer = null;
+                    timerRunning = false;
+                    // Display a new message when the timer reaches zero
+                    getRandomMessage();
+                }
+            }, 1000);
+            timerRunning = true;
+        }
+
+        // Update button text
+        updateButtonText();
+    }
+
+    function updateTimerDisplay() {
+        document.getElementById("timer").innerText = "Time Remaining: " + timeRemaining + " seconds";
+    }
+
+    function updateButtonText() {
+        var button = document.getElementById("startPauseButton");
+        button.innerText = timerRunning ? "Pause Timer" : "Start Timer";
+    }
+
+    function getNewMessage() {
+        // Reset the timer and get a new message
         clearInterval(timer);
         timer = null;
-    } else {
-        // Start the timer
-        timer = setInterval(function () {
-            timeRemaining--;
-            updateTimerDisplay();
-            if (timeRemaining <= 0) {
-                clearInterval(timer);
-                timer = null;
-                // Display a new message when the timer reaches zero
-                getRandomMessage();
-            }
-        }, 1000);
+        timerRunning = false;
+        getRandomMessage();
+        updateTimerDisplay();
+        updateButtonText();
     }
-}
-
-function updateTimerDisplay() {
-    document.getElementById("timer").innerText = "Time Remaining: " + timeRemaining + " seconds";
-}
-
-function getNewMessage() {
-    // Reset the timer and get a new message
-    clearInterval(timer);
-    timer = null;
-    getRandomMessage();
-    updateTimerDisplay();
-}
