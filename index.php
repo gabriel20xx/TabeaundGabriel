@@ -178,7 +178,6 @@ if ($unlocked) {
     echo '<script src="js/fallanimation.js"></script>';
     echo '<script src="js/envelope.js"></script>';
     echo '<script src="js/show-hide.js"></script>';
-    echo '<script src="js/changebackground.js"></script>';
     echo '<script src="js/lock.js"></script>';
 } else {
     // Login container
