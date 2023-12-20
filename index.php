@@ -158,7 +158,7 @@ if ($unlocked) {
     echo '<h2 class="form-label">Your Dare</h2>';
     echo '<h3 id="randomMessage" class="m-4 text-success">Press the button to get a random dare!</h3>';
     echo '<p id="timer"></p>';
-    echo '<button id="startPauseButton" class="btn btn-success" onclick="startPauseTimer()">Start Timer</button>';
+    echo '<button id="startPauseButton" class="btn btn-success mb-2" onclick="startPauseTimer()">Start Timer</button>';
     echo '<button class="btn btn-primary" onclick="getNewMessage()">Get New Message</button>';
     echo '</div>';
     echo '<div class="password-container">';
