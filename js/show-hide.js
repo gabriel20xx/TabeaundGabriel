@@ -40,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleContainer(container) {
         container.classList.toggle("d-none");
         resetButtonColors();
-
-
     }
 
     function hideOtherContainers(containers) {

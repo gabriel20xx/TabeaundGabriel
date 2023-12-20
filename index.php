@@ -158,8 +158,8 @@ if ($unlocked) {
     echo '<h2 class="form-label">Your Dare</h2>';
     echo '<h3 id="randomMessage" class="m-4 text-success">Press the button to get a random dare!</h3>';
     echo '<p id="timer"></p>';
-    echo '<button id="startPauseButton" class="btn btn-success mb-2 d-none" onclick="startPauseTimer()">Start Timer</button>';
-    echo '<button class="btn btn-primary" onclick="getNewMessage()">Get New Message</button>';
+    echo '<button id="startPauseButton" class="btn btn-success me-2 d-none" onclick="startPauseTimer()">Start Timer</button>';
+    echo '<button class="btn btn-primary me-2" onclick="getNewMessage()">Get New Message</button>';
     echo '<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">';
     echo '<input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">';
     echo '<label class="btn btn-outline-primary" for="btncheck1">Feather</label>';
