@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
                         form.submit();
                     }
                 }
+            } else if (event.key === 'Backspace' || event.key === 'Delete') {
+                if (!input.value.trim()) {
+                    var prevInput = array[index - 1];
+                    if (prevInput) {
+                        prevInput.focus();
+                        event.preventDefault();
+                        prevInput.value = '';
+                    }
+                }
             }
         });
 
