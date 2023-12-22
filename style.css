@@ -36,8 +36,8 @@ figure {
     bottom: 20px;
     z-index: 3;
     opacity: 0;
-    animation: appear 0.8s ease-in-out forwards;
-    animation-delay: 1s;
+    animation: fadeUp 0.8s ease-in-out forwards;
+    animation-delay: 4.5s;
 }
 
 .button-container button {
@@ -239,18 +239,6 @@ figure {
 }
 
 @keyframes fadeUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes appear {
     from {
         transform: translateY(20px);
         opacity: 0;
