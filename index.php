@@ -97,7 +97,7 @@ if ($unlocked) {
     // Envelope container
     $data = [
         ["name" => "Gabriel", "message" => "Ich bin unfassbar dankbar bisch du i mis läbe cho🥰 Du bisch di beschti Person uf dere Welt und bisch mis allerwichtigschte. Ich chan es läbe ohni dich ned vorstelle ❤️‍🔥", "color1" => "#0000ff", "color2" => "#ff9500", "color3" => "#00ffff"],
-        ["name" => "Mami", "message" => "", "color1" => "#00000", "color2" => "#00000", "color3" => "#00000"],
+        ["name" => "Mami", "message" => "Te Qiero muchisimo y Yo Admiro! Tu transformación...🙏 Eres MUY grande y has aprendido a caminar en la vida con poder y decision. Dios te iluminé siempre. Feliz Navidad🎄", "color1" => "#f48c06", "color2" => "#dc2f02", "color3" => "#ffea00"],
         ["name" => "Papi", "message" => "Liebe Tabea<br>Ich wünsche Dir von ganzem Herzen ❤️ wunderbare Weihnachten🎄🎄Merry Christmas!🫂", "color1" => "#fdc500", "color2" => "#ffd500", "color3" => "#ffee32"],
         ["name" => "Diego", "message" => "Hey Schwöschterherz<br>Ich wünsche dir ganz schöni Wiehnachte und han dich ganz fest gern!❤️ bin immer für dich da!😘", "color1" => "#96c8eb", "color2" => "#96e8eb", "color3" => "#96a8eb"],
         ["name" => "Roxy", "message" => "Liebi Tabea, für mi bisch du über die jahr wie zure chline schwöster worde. Ig bi so stouz uf di wie du di am witer- entwickle bisch und bi immer da faus du mi bruchsch!❤️", "color1" => "#023e8a", "color2" => "#0077b6", "color3" => "#0096c7"],

@@ -18,7 +18,7 @@ var messages = [
     { text: "Kiss each other passionately.", time: 10 },
     { text: "Touch each other on the body.", time: 15 },
     { text: "Masturbate each others genitals slowly.", time: 20 },
-    { text: "Make love to each other.", time: 30 },
+    { text: "Make love to each other.", time: 30, categories: ["Submissive", "Bondage"], toys: ["Vibrator", "Feather"], gender: "Male", level: 1},
     { text: "Tickle each other with a feather.", time: 12 },
     { text: "Suck each others genitals.", time: 25 },
 ];
