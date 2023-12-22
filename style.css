@@ -35,8 +35,9 @@ figure {
     position: fixed;
     bottom: 20px;
     z-index: 3;
+    opacity: 0;
     animation: fadeUp 0.8s ease-in-out forwards;
-    animation-delay: 3.5s;
+    animation-delay: 1s;
 }
 
 .button-container button {
