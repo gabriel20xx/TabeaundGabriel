@@ -10,15 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['image'])) {
     // Check if the file exists in the gallery directory
     if (file_exists($filePath) && strpos($filePath, $galleryDir) === 0) {
         // Attempt to delete the file
-        if (unlink($filePath)) {
-            echo 'File deleted successfully.';
-        } else {
-            echo 'Failed to delete the file.';
-        }
-    } else {
-        echo 'File does not exist or invalid file path.';
+        unlink($filePath);
     }
-} else {
-    echo 'Invalid request method or image parameter missing.';
 }
+header('Location: ../index.php?page=gallery');
 ?>

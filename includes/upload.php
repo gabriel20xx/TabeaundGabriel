@@ -39,4 +39,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
-header('Location: ../pages/gallery.php');
+header('Location: ../index.php?page=gallery');
