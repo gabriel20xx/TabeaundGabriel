@@ -7,6 +7,13 @@
     border: none;
 }
 
+a {
+    color: inherit;              /* Resets link color to inherit from parent */
+    text-decoration: none;       /* Removes underline */
+    background: none;            /* Removes background */
+    border: none;                /* Removes border (if any) */
+}
+
 header {
     text-align: center;
 }
