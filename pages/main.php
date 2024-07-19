@@ -2,7 +2,7 @@
 if (!defined('ACCESS_ALLOWED')) {
     header('Location: ../index.php');
 } else {
-    include "../parts/buttons.php";
+    include "parts/buttons.php";
     // Button container
     $mainButtons = ['images', 'lock', 'envelope', 'star', 'heart'];
 
@@ -84,7 +84,7 @@ if (!defined('ACCESS_ALLOWED')) {
     echo '<div class="overlay d-none" id="starContainer">';
     echo '<div class="overlay-content">';
     echo '<h2>Daily Quote</h2>';
-    include('../includes/daily_quote.php');
+    include('includes/daily_quote.php');
     echo '</div>';
     echo '</div>';
 
