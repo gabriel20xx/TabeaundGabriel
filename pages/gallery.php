@@ -23,7 +23,7 @@
 </div>
 
 <div class="floating-button">
-    <form action="includes/upload.php" method="post" enctype="multipart/form-data">
+    <form action="../includes/upload.php" method="post" enctype="multipart/form-data">
         <input type="file" name="image" id="fileInput" style="display: none;" required>
         <button type="button" class="upload-btn" onclick="document.getElementById('fileInput').click();">
             <i class="bi bi-upload"></i>
