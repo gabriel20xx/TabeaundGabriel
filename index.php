@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 }
 
 include "includes/head.php";
-echo '<body class="vh-100">';
+echo '<body class="vh-100 container d-flex flex-column align-items-center justify-content-center text-center">';
 
 // Header
 include "includes/header.php";
@@ -155,7 +155,7 @@ if ($unlocked) {
     echo '<script src="js/lock.js"></script>';
 } else {
     // Login container
-    echo '<div class="container d-flex flex-column align-items-center justify-content-center text-center">';
+    echo '<div>';
     echo '<form id="pin_input" action="/index.php" method="post">';
     echo '<div class="container d-flex flex-column">';
     echo '<h1>Please enter pin code</h1>';
