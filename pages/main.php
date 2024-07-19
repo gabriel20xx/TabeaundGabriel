@@ -36,24 +36,7 @@ if (!defined('ACCESS_ALLOWED')) {
     }
 
     // Button container
-    $allButtons = ['lock', 'envelope', 'star', 'heart'];
-    $mainButtons = ['images'];
-    $galleryButtons = ['house', 'upload'];
-
-    // Initialize $buttonClasses with all buttons by default
-    $buttonClasses = $allButtons;
-
-    // Check if 'page' parameter is set
-    if (isset($_GET['page'])) {
-        $page = $_GET['page'];
-        
-        // Update $buttonClasses based on the 'page' parameter
-        if ($page == 'gallery') {
-            $buttonClasses = array_merge($galleryButtons, $allButtons);
-        } elseif ($page == 'main') {
-            $buttonClasses = array_merge($mainButtons, $allButtons);
-        }
-    }
+    $mainButtons = ['images', 'lock', 'envelope', 'star', 'heart'];
 
     // Generate buttons
     echo '<div class="button-container">';

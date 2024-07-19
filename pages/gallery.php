@@ -24,7 +24,8 @@ if (!defined('ACCESS_ALLOWED')) {
     }
     echo '</div>';
 
-    $galleryButtons = ['house', 'upload'];
+    $galleryButtons = ['house', 'lock', 'upload', 'star', 'heart'];
+
     echo '<div class="button-container">';
     foreach ($galleryButtons as $class) {
         echo '<button class="' . htmlspecialchars($class) . '-btn" id="' . htmlspecialchars($class) . 'Button">';
