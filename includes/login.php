@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start the session
 
-include "includes/pin.php";
+include "pin.php";
 
 // Check if the site is already unlocked
 if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
