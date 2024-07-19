@@ -22,7 +22,18 @@ echo '<body class="vh-100 container d-flex flex-column align-items-center justif
 include "includes/header.php";
 
 if ($unlocked) {
-    include "includes/router.php";
+    if (isset($_GET['page'])) {
+        $page = $_GET['page'];
+        if ($page === 'main') {
+            include "../main.php";
+        }
+        if ($page === 'gallery') {
+            include "../gallery.php";
+        }
+    
+    } else {
+        header('Location: ../index.php');
+    }
 } else {
     include "login.php";
 }
