@@ -23,5 +23,8 @@ if (!defined('ACCESS_ALLOWED')) {
         echo '</div>';
     }
     echo '</div>';
+
+    // Button container
+    include "../parts/buttons.php";
 }
     ?>

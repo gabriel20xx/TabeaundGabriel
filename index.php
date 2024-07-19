@@ -32,9 +32,6 @@ if ($unlocked) {
     } else {
         include_once "pages/main.php";
     }
-
-    // Button container
-    include "../parts/buttons.php";
     
     // JavaScript
     echo '<script src="js/fallanimation.js"></script>';

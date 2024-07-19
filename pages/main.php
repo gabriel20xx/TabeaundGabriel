@@ -35,6 +35,9 @@ if (!defined('ACCESS_ALLOWED')) {
         }
     }
 
+    // Button container
+    include "../parts/buttons.php";
+
     // Envelope container
     $data = [
         ["name" => "Gabriel", "message" => "Ich bin unfassbar dankbar bisch du i mis läbe cho🥰 Du bisch di beschti Person uf dere Welt und bisch mis allerwichtigschte. Ich chan es läbe ohni dich ned vorstelle ❤️‍🔥", "color1" => "#0000ff", "color2" => "#ff9500", "color3" => "#00ffff"],
