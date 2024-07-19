@@ -3,7 +3,17 @@ if (!defined('ACCESS_ALLOWED')) {
     header('Location: ../index.php');
 } else {
     include "../parts/buttons.php";
-    
+    # Buttons
+    $galleryButtons = ['house', 'lock', 'upload', 'star', 'heart'];
+
+    echo '<div class="button-container">';
+    foreach ($galleryButtons as $class) {
+        echo '<button class="' . htmlspecialchars($class) . '-btn" id="' . htmlspecialchars($class) . 'Button">';
+        echo '<i class="bi bi-' . htmlspecialchars($class) . '"></i>';
+        echo '</button>';
+    }
+    echo '</div>';
+
     echo '<h1>Gallery</h1>';
 
     echo '<div>';
@@ -23,17 +33,6 @@ if (!defined('ACCESS_ALLOWED')) {
         echo '<button type="submit">Delete</button>';
         echo '</form>';
         echo '</div>';
-    }
-    echo '</div>';
-
-    # Buttons
-    $galleryButtons = ['house', 'lock', 'upload', 'star', 'heart'];
-
-    echo '<div class="button-container">';
-    foreach ($galleryButtons as $class) {
-        echo '<button class="' . htmlspecialchars($class) . '-btn" id="' . htmlspecialchars($class) . 'Button">';
-        echo '<i class="bi bi-' . htmlspecialchars($class) . '"></i>';
-        echo '</button>';
     }
     echo '</div>';
 ?>

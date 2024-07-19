@@ -3,6 +3,17 @@ if (!defined('ACCESS_ALLOWED')) {
     header('Location: ../index.php');
 } else {
     include "../parts/buttons.php";
+    // Button container
+    $mainButtons = ['images', 'lock', 'envelope', 'star', 'heart'];
+
+    // Generate buttons
+    echo '<div class="button-container">';
+    foreach ($mainButtons as $class) {
+        echo '<button class="' . htmlspecialchars($class) . '-btn" id="' . htmlspecialchars($class) . 'Button">';
+        echo '<i class="bi bi-' . htmlspecialchars($class) . '"></i>';
+        echo '</button>';
+    }
+    echo '</div>';
 
     // Quote and images container
     $quotesAuthors = [
@@ -36,18 +47,6 @@ if (!defined('ACCESS_ALLOWED')) {
             $y++;
         }
     }
-
-    // Button container
-    $mainButtons = ['images', 'lock', 'envelope', 'star', 'heart'];
-
-    // Generate buttons
-    echo '<div class="button-container">';
-    foreach ($mainButtons as $class) {
-        echo '<button class="' . htmlspecialchars($class) . '-btn" id="' . htmlspecialchars($class) . 'Button">';
-        echo '<i class="bi bi-' . htmlspecialchars($class) . '"></i>';
-        echo '</button>';
-    }
-    echo '</div>';
 
     // Envelope container
     $data = [
