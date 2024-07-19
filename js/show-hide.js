@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    imagesButton.addEventListener("click", function () {
-        header('Location: gallery.php');
+    document.getElementById('imagesButton').addEventListener("click", function () {
+        window.location.href = 'gallery.php';
     });
 
     heartButton.addEventListener("click", function () {
