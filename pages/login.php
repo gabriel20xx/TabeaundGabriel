@@ -23,5 +23,5 @@ if ($incorrect) {
 echo '</div>';
 
 // JavaScript
-echo '<script src="js/pin.js"></script>';
+echo '<script src="../js/pin.js"></script>';
 ?>
