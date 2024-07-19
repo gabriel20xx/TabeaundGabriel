@@ -18,8 +18,6 @@ $daysSince = $interval->format('%a');
 
 $correctPin = str_pad($daysSince, 4, '0', STR_PAD_LEFT);
 
-include "includes/login.php";
-
 include "parts/head.php";
 echo '<body class="vh-100 container d-flex flex-column align-items-center justify-content-between text-center">';
 
