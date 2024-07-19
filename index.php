@@ -32,7 +32,7 @@ if ($unlocked) {
         }
     
     } else {
-        header('Location: ../index.php');
+        include "../index.php";
     }
 } else {
     include "login.php";
