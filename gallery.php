@@ -31,7 +31,7 @@ include "includes/head.php";
         foreach($images as $image) {
             echo '<div style="display: inline-block; margin: 10px; text-align: center;">';
             echo '<img src="' . $image . '" style="width: 150px; height: 150px;"><br>';
-            echo '<form action="delete.php" method="post" style="display:inline;">';
+            echo '<form action="../delete.php" method="post" style="display:inline;">';
             echo '<input type="hidden" name="image" value="' . $image . '">';
             echo '<button type="submit">Delete</button>';
             echo '</form>';
