@@ -1,11 +1,5 @@
 <?php
 // Login container
-if (isset($_GET['page'])) {
-    $page = $_GET['page'];
-} else {
-    $page = 'main';
-}
-
 echo '<div>';
 echo '<form id="pin_input" action="includes/router.php?page=' . $page . '" method="post">';
 echo '<div class="container d-flex flex-column">';

@@ -1,13 +1,7 @@
 <?php
 session_start(); // Start the session
 
-$startDate = new DateTime('2022-06-23');
-$today = new DateTime();
-
-$interval = date_diff($startDate, $today);
-$daysSince = $interval->format('%a');
-
-$correctPin = str_pad($daysSince, 4, '0', STR_PAD_LEFT);
+include "includes/pin.php";
 
 // Check if the site is already unlocked
 if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {

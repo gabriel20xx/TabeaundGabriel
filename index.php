@@ -7,6 +7,12 @@ if (is_dir($imageFolder)) {
     $imageCount = count(array_diff(scandir($imageFolder), ['.', '..']));
 }
 
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = 'main';
+}
+
 include "includes/login.php";
 
 include "includes/head.php";
