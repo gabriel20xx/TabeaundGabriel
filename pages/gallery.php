@@ -24,6 +24,7 @@ if (!defined('ACCESS_ALLOWED')) {
     }
     echo '</div>';
 
+    # Buttons
     $galleryButtons = ['house', 'lock', 'upload', 'star', 'heart'];
 
     echo '<div class="button-container">';

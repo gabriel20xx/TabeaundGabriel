@@ -40,7 +40,7 @@ if (!defined('ACCESS_ALLOWED')) {
 
     // Generate buttons
     echo '<div class="button-container">';
-    foreach ($buttonClasses as $class) {
+    foreach ($mainButtons as $class) {
         echo '<button class="' . htmlspecialchars($class) . '-btn" id="' . htmlspecialchars($class) . 'Button">';
         echo '<i class="bi bi-' . htmlspecialchars($class) . '"></i>';
         echo '</button>';
