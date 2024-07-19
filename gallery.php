@@ -7,16 +7,17 @@ include "includes/head.php";
     include "includes/header.php";
     ?>
 
+    <h1>Gallery</h1>
+
     <div class="floating-button">
         <form action="includes/upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="image" required>
-            <button class="upload-btn" id="uploadButton" type="submit">
-            <i class="bi bi-upload"></i>'
+            <input type="file" name="image" id="fileInput" style="display: none;" required>
+            <button type="button" class="upload-btn" onclick="document.getElementById('fileInput').click();">
+                <i class="bi bi-upload"></i>
             </button>
         </form>
     </div>
 
-    <h1>Gallery</h1>
     <div>
         <?php
         $directory = 'gallery/';
@@ -33,5 +34,11 @@ include "includes/head.php";
         }
         ?>
     </div>
+    
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function() {
+            this.parentElement.submit();
+        });
+    </script>
 </body>
 </html>
