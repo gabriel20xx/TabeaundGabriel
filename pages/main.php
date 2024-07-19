@@ -36,15 +36,7 @@ if (!defined('ACCESS_ALLOWED')) {
     }
 
     // Button container
-    $buttonClasses = ['images', 'lock', 'envelope', 'star', 'heart'];
-
-    echo '<div class="button-container">';
-    foreach ($buttonClasses as $class) {
-        echo '<button class="' . $class . '-btn" id="' . $class . 'Button">';
-        echo '<i class="bi bi-' . $class . '"></i>';
-        echo '</button>';
-    }
-    echo '</div>';
+    include "parts/buttons.php";
 
     // Envelope container
     $data = [

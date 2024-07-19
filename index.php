@@ -13,13 +13,13 @@ if (isset($_GET['page'])) {
     $page = 'main';
 }
 
-include "includes/login.php";
+include "parts/login.php";
 
-include "includes/head.php";
+include "parts/head.php";
 echo '<body class="vh-100 container d-flex flex-column align-items-center justify-content-between text-center">';
 
 // Header
-include "includes/header.php";
+include "parts/header.php";
 
 if ($unlocked) {
     define('ACCESS_ALLOWED', true);
@@ -40,4 +40,4 @@ if ($unlocked) {
 }
 
 // Footer
-include "includes/footer.php";
+include "parts/footer.php";
