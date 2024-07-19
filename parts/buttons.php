@@ -2,7 +2,7 @@
 
 $allButtons = ['lock', 'envelope', 'star', 'heart'];
 $mainButtons = ['images'];
-$galleryButtons = ['home', 'upload'];
+$galleryButtons = ['house', 'upload'];
 
 // Initialize $buttonClasses with all buttons by default
 $buttonClasses = $allButtons;
@@ -17,9 +17,6 @@ if (isset($_GET['page'])) {
     } elseif ($page === 'main') {
         $buttonClasses = array_merge($mainButtons, $allButtons);
     }
-} else {
-    // Default to all buttons if 'page' is not set
-    $buttonClasses = $allButtons;
 }
 
 // Generate buttons
