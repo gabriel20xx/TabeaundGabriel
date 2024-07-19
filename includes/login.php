@@ -1,4 +1,8 @@
 <?php
+session_start(); // Start session
+
+$correctPin = str_pad($daysSince, 4, '0', STR_PAD_LEFT); // Ensure correctPin is defined
+
 // Check if the site is already unlocked
 if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
     $incorrect = false;

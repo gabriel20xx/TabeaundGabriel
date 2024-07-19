@@ -1,5 +1,7 @@
 <?php
-include "../includes/login.php";
+session_start(); // Start session
+
+$page = isset($_GET['page']) ? $_GET['page'] : 'main'; // Ensure $page is defined
 
 // Login container
 echo '<div>';

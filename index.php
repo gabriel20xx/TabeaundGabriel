@@ -1,4 +1,5 @@
 <?php
+session_start(); // Start session
 
 $imageFolder = './img';
 $incorrect = false;
@@ -7,11 +8,7 @@ if (is_dir($imageFolder)) {
     $imageCount = count(array_diff(scandir($imageFolder), ['.', '..']));
 }
 
-if (isset($_GET['page'])) {
-    $page = $_GET['page'];
-} else {
-    $page = 'main';
-}
+$page = isset($_GET['page']) ? $_GET['page'] : 'main';
 
 $startDate = new DateTime('2022-06-23');
 $today = new DateTime();
@@ -26,20 +23,18 @@ echo '<body class="vh-100 container d-flex flex-column align-items-center justif
 
 // Header
 include "parts/header.php";
+
 if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
     define('ACCESS_ALLOWED', true);
-    if (isset($_GET['page'])) {
-        $page = $_GET['page'];
-        if ($page === 'main') {
-            include_once "pages/main.php";
-        }
-        if ($page === 'gallery') {
-            include_once "pages/gallery.php";
-        }
-    } else {
-        include_once "pages/main.php";
-    }
     
+    if ($page === 'main') {
+        include_once "pages/main.php";
+    } elseif ($page === 'gallery') {
+        include_once "pages/gallery.php";
+    } else {
+        include_once "pages/main.php"; // Fallback to main if page is not recognized
+    }
+
     // JavaScript
     echo '<script src="js/fallanimation.js"></script>';
     echo '<script src="js/envelope.js"></script>';
@@ -51,3 +46,4 @@ if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
 
 // Footer
 include "parts/footer.php";
+?>
