@@ -12,9 +12,9 @@ if (isset($_GET['page'])) {
     $page = $_GET['page'];
     
     // Update $buttonClasses based on the 'page' parameter
-    if ($page === 'gallery') {
+    if ($page == 'gallery') {
         $buttonClasses = array_merge($galleryButtons, $allButtons);
-    } elseif ($page === 'main') {
+    } elseif ($page == 'main') {
         $buttonClasses = array_merge($mainButtons, $allButtons);
     }
 }

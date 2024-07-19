@@ -29,7 +29,6 @@ if ($unlocked) {
         if ($page === 'gallery') {
             include_once "pages/gallery.php";
         }
-    
     } else {
         include_once "pages/main.php";
     }
