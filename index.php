@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 }
 
 include "includes/head.php";
-echo '<body class="vh-100 container d-flex flex-column">';
+echo '<body class="vh-100">';
 
 // Header
 include "includes/header.php";
