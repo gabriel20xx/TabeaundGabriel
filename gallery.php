@@ -2,12 +2,12 @@
 include "includes/head.php";
 ?>
 <body>
-    // Header
     <?php
+    // Header
     include "includes/header.php";
     ?>
 
-    <h1>Uploaded Images</h1>
+    <h1>Gallery</h1>
     <div>
         <?php
         $directory = 'gallery/';
