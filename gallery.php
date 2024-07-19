@@ -7,6 +7,16 @@ include "includes/head.php";
     include "includes/header.php";
     ?>
 
+    <div class="floating-button">
+        <h1>Upload Image</h1>
+        <form action="includes/upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <button class="upload-btn" id="uploadButton" type="submit">
+            <i class="bi bi-upload"></i>'
+            </button>
+        </form>
+    </div>
+
     <h1>Gallery</h1>
     <div>
         <?php
@@ -23,16 +33,6 @@ include "includes/head.php";
             echo '</div>';
         }
         ?>
-    </div>
-
-    <div class="floating-button">
-        <h1>Upload Image</h1>
-        <form action="includes/upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="image" required>
-            <button class="upload-btn" id="uploadButton" type="submit">
-            <i class="bi bi-upload"></i>'
-            </button>
-        </form>
     </div>
 </body>
 </html>
