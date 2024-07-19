@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var envelopeContainer = document.getElementById("envelopeContainer");
     
     var imagesButton = document.getElementById("imagesButton");
+    var houseButton = document.getElementById("houseButton");
 
     var heartButton = document.getElementById("heartButton");
 
@@ -38,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     imagesButton.addEventListener("click", function () {
         window.location.href = '../index.php?page=gallery';
+    });
+
+    houseButton.addEventListener("click", function () {
+        window.location.href = '../index.php?page=main';
     });
 
     heartButton.addEventListener("click", function () {
