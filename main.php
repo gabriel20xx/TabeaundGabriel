@@ -115,6 +115,6 @@ if ($unlocked) {
     echo '<script src="js/show-hide.js"></script>';
     echo '<script src="js/lock.js"></script>';
 } else {
-    include "index.php";
+    header('Location: index.php');
 }
 ?>
