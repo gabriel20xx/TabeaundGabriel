@@ -23,39 +23,5 @@ if (!defined('ACCESS_ALLOWED')) {
         echo '</div>';
     }
     echo '</div>';
-    
-    ?>
-    <script>
-    document.getElementById('uploadButton').addEventListener('click', function () {
-        let fileInput = document.createElement('input');
-        fileInput.type = 'file';
-        fileInput.style.display = 'none';
-        
-        fileInput.addEventListener('change', function() {
-            let file = fileInput.files[0];
-            if (file) {
-                let formData = new FormData();
-                formData.append('image', file);
-                
-                let xhr = new XMLHttpRequest();
-                xhr.open('POST', '../includes/upload.php', true);
-                xhr.onload = function() {
-                    if (xhr.status === 200) {
-                        // Handle successful upload
-                        console.log('File uploaded successfully');
-                        location.reload(); // Reload the page to show the new image
-                    } else {
-                        // Handle error
-                        console.log('Error uploading file');
-                    }
-                };
-                xhr.send(formData);
-            }
-        });
-    
-        fileInput.click();
-    });
-    </script>
-    <?php
 }
-?>
+    ?>
