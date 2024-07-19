@@ -1,26 +1,37 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
-    $pin1 = isset($_POST["pin1"]) ? $_POST["pin1"] : "";
-    $pin2 = isset($_POST["pin2"]) ? $_POST["pin2"] : "";
-    $pin3 = isset($_POST["pin3"]) ? $_POST["pin3"] : "";
-    $pin4 = isset($_POST["pin4"]) ? $_POST["pin4"] : "";
-    $pin = $pin1 . $pin2 . $pin3 . $pin4;
+session_start(); // Start the session
 
-    $startDate = new DateTime('2022-06-23');
-    $today = new DateTime();
+$startDate = new DateTime('2022-06-23');
+$today = new DateTime();
 
-    $interval = date_diff($startDate, $today);
-    $daysSince = $interval->format('%a');
+$interval = date_diff($startDate, $today);
+$daysSince = $interval->format('%a');
 
-    $correctPin = str_pad($daysSince, 4, '0', STR_PAD_LEFT);
+$correctPin = str_pad($daysSince, 4, '0', STR_PAD_LEFT);
 
-    if ($pin == $correctPin) {
-        $unlocked = true;
-        $incorrect = false;
-    } else {
-        $incorrect = true;
-    }
+// Check if the site is already unlocked
+if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
+    // If unlocked, no need to check the PIN again
+    $unlocked = true;
+    $incorrect = false;
 } else {
-    $unlocked = false;
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
+        $pin1 = isset($_POST["pin1"]) ? $_POST["pin1"] : "";
+        $pin2 = isset($_POST["pin2"]) ? $_POST["pin2"] : "";
+        $pin3 = isset($_POST["pin3"]) ? $_POST["pin3"] : "";
+        $pin4 = isset($_POST["pin4"]) ? $_POST["pin4"] : "";
+        $pin = $pin1 . $pin2 . $pin3 . $pin4;
+
+        if ($pin == $correctPin) {
+            $_SESSION['pin'] = $pin; // Store the PIN in session
+            $unlocked = true;
+            $incorrect = false;
+        } else {
+            $incorrect = true;
+            $unlocked = false;
+        }
+    } else {
+        $unlocked = false;
+    }
 }
 ?>
