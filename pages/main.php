@@ -2,6 +2,8 @@
 if (!defined('ACCESS_ALLOWED')) {
     header('Location: ../index.php');
 } else {
+    include "../parts/buttons.php";
+
     // Quote and images container
     $quotesAuthors = [
         ["quote" => "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.", "author" => "Angelita Lim"],
