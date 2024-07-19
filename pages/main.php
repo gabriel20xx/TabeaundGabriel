@@ -1,6 +1,6 @@
 <?php
 if (!defined('ACCESS_ALLOWED')) {
-    die('Direct access not allowed.');
+    header('Location: ../index.php');
 } else {
     // Quote and images container
     $quotesAuthors = [

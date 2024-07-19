@@ -1,6 +1,6 @@
 <?php
 if (!defined('ACCESS_ALLOWED')) {
-    die('Direct access not allowed.');
+    header('Location: ../index.php');
 } else {
     echo '<h1>Gallery</h1>';
 
