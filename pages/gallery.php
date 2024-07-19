@@ -2,6 +2,8 @@
 if (!defined('ACCESS_ALLOWED')) {
     header('Location: ../index.php');
 } else {
+    include "../parts/buttons.php";
+    
     echo '<h1>Gallery</h1>';
 
     echo '<div>';
