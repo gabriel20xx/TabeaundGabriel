@@ -24,7 +24,15 @@ if (!defined('ACCESS_ALLOWED')) {
     }
     echo '</div>';
 
+    $galleryButtons = ['house', 'upload'];
+    echo '<div class="button-container">';
+    foreach ($galleryButtons as $class) {
+        echo '<button class="' . htmlspecialchars($class) . '-btn" id="' . htmlspecialchars($class) . 'Button">';
+        echo '<i class="bi bi-' . htmlspecialchars($class) . '"></i>';
+        echo '</button>';
+    }
+    echo '</div>';
     // Button container
-    include "../parts/buttons.php";
+    include_once "../parts/buttons.php";
 }
     ?>
