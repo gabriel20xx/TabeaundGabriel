@@ -26,7 +26,6 @@ echo '<body class="vh-100 container d-flex flex-column align-items-center justif
 
 // Header
 include "parts/header.php";
-$unlocked = true;
 if ($unlocked) {
     define('ACCESS_ALLOWED', true);
     if (isset($_GET['page'])) {
