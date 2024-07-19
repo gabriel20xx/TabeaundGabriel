@@ -24,19 +24,39 @@ if (!defined('ACCESS_ALLOWED')) {
         }
     echo '</div>';
 
-    echo '<div class="floating-button">';
-    echo '<form action="../includes/upload.php" method="post" enctype="multipart/form-data">';
-    echo '<input type="file" name="image" id="fileInput" style="display: none;" required>';
-    echo '<button type="button" class="upload-btn" onclick="document.getElementById(\'fileInput\').click();">';
-    echo '<i class="bi bi-upload"></i>';
-    echo '</button>';
-    echo '</form>';
-    echo '</div>';
-
-    echo '<script>';
-    echo 'document.getElementById(\'fileInput\').addEventListener(\'change\', function() {';
-    echo 'this.parentElement.submit();';
-    echo '});';
-    echo '</script>';
+    // Button container
+    include "parts/buttons.php";
+?>
+    <script>
+    document.getElementById('uploadButton').addEventListener('click', function () {
+        let fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.style.display = 'none';
+        
+        fileInput.addEventListener('change', function() {
+            let file = fileInput.files[0];
+            if (file) {
+                let formData = new FormData();
+                formData.append('image', file);
+                
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', '../includes/upload.php', true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        // Handle successful upload
+                        console.log('File uploaded successfully');
+                    } else {
+                        // Handle error
+                        console.log('Error uploading file');
+                    }
+                };
+                xhr.send(formData);
+            }
+        });
+    
+        fileInput.click();
+    });
+    </script>
+<?php
 }
 ?>
