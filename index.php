@@ -25,10 +25,10 @@ if ($unlocked) {
     if (isset($_GET['page'])) {
         $page = $_GET['page'];
         if ($page === 'main') {
-            include "main.php";
+            include_once "main.php";
         }
         if ($page === 'gallery') {
-            include "gallery.php";
+            include_once "gallery.php";
         }
     
     } else {
