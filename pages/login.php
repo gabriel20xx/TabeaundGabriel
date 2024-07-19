@@ -1,4 +1,6 @@
 <?php
+include "../includes/login.php";
+
 // Login container
 echo '<div>';
 echo '<form id="pin_input" action="index.php?page=' . $page . '" method="post">';

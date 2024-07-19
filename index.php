@@ -13,8 +13,6 @@ if (isset($_GET['page'])) {
     $page = 'main';
 }
 
-include "parts/login.php";
-
 include "parts/head.php";
 echo '<body class="vh-100 container d-flex flex-column align-items-center justify-content-between text-center">';
 
