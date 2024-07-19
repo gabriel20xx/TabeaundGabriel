@@ -1,8 +1,6 @@
 <?php
 // Check if the site is already unlocked
 if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
-    // If unlocked, no need to check the PIN again
-    $unlocked = true;
     $incorrect = false;
 } else {
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
@@ -14,14 +12,10 @@ if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
 
         if ($pin == $correctPin) {
             $_SESSION['pin'] = $pin; // Store the PIN in session
-            $unlocked = true;
             $incorrect = false;
         } else {
             $incorrect = true;
-            $unlocked = false;
         }
-    } else {
-        $unlocked = false;
     }
 }
 ?>

@@ -28,7 +28,7 @@ echo '<body class="vh-100 container d-flex flex-column align-items-center justif
 
 // Header
 include "parts/header.php";
-if ($unlocked) {
+if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
     define('ACCESS_ALLOWED', true);
     if (isset($_GET['page'])) {
         $page = $_GET['page'];
