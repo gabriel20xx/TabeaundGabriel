@@ -1,7 +1,5 @@
 <?php
 
-define('ACCESS_ALLOWED', true);
-
 $imageFolder = './img';
 $incorrect = false;
 
@@ -24,6 +22,7 @@ echo '<body class="vh-100 container d-flex flex-column align-items-center justif
 include "includes/header.php";
 
 if ($unlocked) {
+    define('ACCESS_ALLOWED', true);
     if (isset($_GET['page'])) {
         $page = $_GET['page'];
         if ($page === 'main') {
