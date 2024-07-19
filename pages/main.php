@@ -2,7 +2,7 @@
 if (!defined('ACCESS_ALLOWED')) {
     header('Location: ../index.php');
 } else {
-    include "parts/buttons.php";
+    //include "parts/buttons.php";
     // Button container
     $mainButtons = ['images', 'lock', 'envelope', 'star', 'heart'];
 
