@@ -1,5 +1,4 @@
 <?php
-if ($unlocked) {
     // Quote and images container
     $quotesAuthors = [
         ["quote" => "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.", "author" => "Angelita Lim"],
@@ -114,7 +113,4 @@ if ($unlocked) {
     echo '<script src="js/envelope.js"></script>';
     echo '<script src="js/show-hide.js"></script>';
     echo '<script src="js/lock.js"></script>';
-} else {
-    header('Location: index.php');
-}
 ?>
