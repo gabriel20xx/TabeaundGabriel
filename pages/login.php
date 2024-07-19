@@ -1,5 +1,5 @@
 <?php
-include "../includes/login.php";
+include "includes/login.php";
 
 // Login container
 echo '<div>';
