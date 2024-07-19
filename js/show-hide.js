@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     imagesButton.addEventListener("click", function () {
-        window.location.href = 'index.php?page=gallery';
+        window.location.href = '../index.php?page=gallery';
     });
 
     heartButton.addEventListener("click", function () {
