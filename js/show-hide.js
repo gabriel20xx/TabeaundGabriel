@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var heartButton = document.getElementById("heartButton");
     var snowButton = document.getElementById("snowButton");
 
+    var imagesButton = document.getElementById("imagesButton");
+
     var heartEnabled, snowEnabled, envelopeEnabled, lockEnabled, starEnabled;
 
     starButton.addEventListener("click", function () {
@@ -33,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (envelopeEnabled) {
             toggleButton("envelopeButton", "black", "gray", envelopeEnabled);
         }
+    });
+
+    imagesButton.addEventListener("click", function () {
+        header('Location: gallery.php');
     });
 
     heartButton.addEventListener("click", function () {
