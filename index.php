@@ -16,14 +16,7 @@ echo '<body class="vh-100 container d-flex flex-column align-items-center justif
 include "includes/header.php";
 
 if ($unlocked) {
-    if (isset($_GET['page'])) {
-        $page = $_GET['page'];
-        if ($page === 'gallery') {
-            include "gallery.php";
-        }
-    } else {
-        include "main.php";
-    }
+    include "includes/router.php";
 } else {
     include "login.php";
 }
