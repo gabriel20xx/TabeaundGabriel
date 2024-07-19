@@ -25,7 +25,7 @@ include "includes/head.php";
         ?>
     </div>
 
-    <div class="button-container">
+    <div class="floating-button">
         <h1>Upload Image</h1>
         <form action="includes/upload.php" method="post" enctype="multipart/form-data">
             <input type="file" name="image" required>
