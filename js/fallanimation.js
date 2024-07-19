@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  document.getElementById("snowButton").addEventListener("click", function (event) {
+  /*document.getElementById("snowButton").addEventListener("click", function (event) {
     if (event.target.closest("#snowButton")) {
       toggleSnowAnimation.call(this);
     }
-  });
+  });*/
 });
