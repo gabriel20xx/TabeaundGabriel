@@ -1,7 +1,5 @@
 <?php
 
-session_start(); // Start the session
-
 $imageFolder = './img';
 $incorrect = false;
 
