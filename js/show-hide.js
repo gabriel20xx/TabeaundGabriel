@@ -5,13 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var lockContainer = document.getElementById("lockContainer");
     var envelopeButton = document.getElementById("envelopeButton");
     var envelopeContainer = document.getElementById("envelopeContainer");
-
-    var heartButton = document.getElementById("heartButton");
-    var snowButton = document.getElementById("snowButton");
-
+    
     var imagesButton = document.getElementById("imagesButton");
 
-    var heartEnabled, snowEnabled, envelopeEnabled, lockEnabled, starEnabled;
+    var heartButton = document.getElementById("heartButton");
+
+    var heartEnabled, envelopeEnabled, lockEnabled, starEnabled;
 
     starButton.addEventListener("click", function () {
         toggleContainer(starContainer);
@@ -37,16 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    document.getElementById('imagesButton').addEventListener("click", function () {
+    imagesButton.addEventListener("click", function () {
         window.location.href = 'gallery.php';
     });
 
     heartButton.addEventListener("click", function () {
         toggleButton("heartButton", "darkred", "red", heartEnabled);
-    });
-
-    snowButton.addEventListener("click", function () {
-        toggleButton("snowButton", "darkblue", "blue", snowEnabled);
     });
 
     function toggleContainer(container) {
@@ -66,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function resetButtonColors() {
         // Reset all button colors to their initial state
         heartButton.style.backgroundColor = heartEnabled ? "darkred" : "red";
-        snowButton.style.backgroundColor = snowEnabled ? "darkblue" : "blue";
         envelopeButton.style.backgroundColor = envelopeEnabled ? "black" : "gray";
         lockButton.style.backgroundColor = lockEnabled ? "darkmagenta" : "magenta";
         starButton.style.backgroundColor = starEnabled ? "darkorange" : "orange";
@@ -88,9 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (buttonId) {
             case "heartButton":
                 heartEnabled = state;
-                break;
-            case "snowButton":
-                snowEnabled = state;
                 break;
             // Add cases for other buttons if needed
         }
