@@ -1,5 +1,7 @@
 <?php
 
+define('ACCESS_ALLOWED', true);
+
 $imageFolder = './img';
 $incorrect = false;
 
