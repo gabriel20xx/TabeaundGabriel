@@ -1,8 +1,4 @@
 <?php
-session_start(); // Start the session
-
-include "pin.php";
-
 // Check if the site is already unlocked
 if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
     // If unlocked, no need to check the PIN again
