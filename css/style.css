@@ -47,7 +47,6 @@ figure {
     bottom: 20px;
     z-index: 3;
     opacity: 0;
-    animation: fadeUp 0.8s ease-in-out forwards;
 }
 
 .button-container button {
@@ -58,15 +57,18 @@ figure {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease;
 }
 
 .heart-btn {
     background-color: red;
 }
 
-.images-btn {
+.images-btn, .house-tbn {
     background-color: blue;
+}
+
+.upload-btn {
+    background-color: green;
 }
 
 .envelope-btn {
