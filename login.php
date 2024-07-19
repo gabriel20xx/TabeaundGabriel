@@ -1,7 +1,7 @@
 <?php
 // Login container
 echo '<div>';
-echo '<form id="pin_input" action="includes/router.php?page=' . $page . '" method="post">';
+echo '<form id="pin_input" action="index.php?page=' . $page . '" method="post">';
 echo '<div class="container d-flex flex-column">';
 echo '<h1>Please enter pin code</h1>';
 echo '<div class="my-2">';
