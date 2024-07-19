@@ -33,6 +33,5 @@ if (!defined('ACCESS_ALLOWED')) {
     }
     echo '</div>';
     // Button container
-    include_once "../parts/buttons.php";
 }
     ?>
