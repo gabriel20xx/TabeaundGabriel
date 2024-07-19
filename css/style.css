@@ -8,10 +8,10 @@
 }
 
 a {
-    color: inherit;              /* Resets link color to inherit from parent */
-    text-decoration: none;       /* Removes underline */
-    background: none;            /* Removes background */
-    border: none;                /* Removes border (if any) */
+    color: inherit;           
+    text-decoration: none;     
+    background: none;          
+    border: none;               
 }
 
 header {
@@ -272,99 +272,99 @@ figure {
     }
 }*/
 
-body> :nth-child(1) {
+body> :nth-child(2) {
     animation-delay: 1s;
 }
 
-body> :nth-child(2) {
+body> :nth-child(3) {
     animation-delay: 2s;
 }
 
-body> :nth-child(3) {
+body> :nth-child(4) {
     animation-delay: 3s;
 }
 
-body> :nth-child(4) {
+body> :nth-child(5) {
     animation-delay: 4s;
 }
 
-body> :nth-child(5) {
+body> :nth-child(6) {
     animation-delay: 5s;
 }
 
-body> :nth-child(6) {
+body> :nth-child(7) {
     animation-delay: 6s;
 }
 
-body> :nth-child(7) {
+body> :nth-child(8) {
     animation-delay: 7s;
 }
 
-body> :nth-child(8) {
+body> :nth-child(9) {
     animation-delay: 8s;
 }
 
-body> :nth-child(9) {
+body> :nth-child(10) {
     animation-delay: 9s;
 }
 
-body> :nth-child(10) {
+body> :nth-child(11) {
     animation-delay: 10s;
 }
 
-body> :nth-child(11) {
+body> :nth-child(12) {
     animation-delay: 11s;
 }
 
-body> :nth-child(12) {
+body> :nth-child(13) {
     animation-delay: 12s;
 }
 
-body> :nth-child(13) {
+body> :nth-child(14) {
     animation-delay: 13s;
 }
 
-body> :nth-child(14) {
+body> :nth-child(15) {
     animation-delay: 14s;
 }
 
-body> :nth-child(15) {
+body> :nth-child(16) {
     animation-delay: 15s;
 }
 
-body> :nth-child(16) {
+body> :nth-child(17) {
     animation-delay: 16s;
 }
 
-body> :nth-child(17) {
+body> :nth-child(18) {
     animation-delay: 17s;
 }
 
-body> :nth-child(18) {
+body> :nth-child(19) {
     animation-delay: 18s;
 }
 
-body> :nth-child(19) {
+body> :nth-child(20) {
     animation-delay: 19s;
 }
 
-body> :nth-child(20) {
+body> :nth-child(21) {
     animation-delay: 20s;
 }
 
-body> :nth-child(21) {
+body> :nth-child(22) {
     animation-delay: 21s;
 }
 
-body> :nth-child(22) {
+body> :nth-child(23) {
     animation-delay: 22s;
 }
 
-body> :nth-child(23) {
+body> :nth-child(24) {
     animation-delay: 23s;
 }
 
-body> :nth-child(24) {
+body> :nth-child(25) {
     animation-delay: 24s;
 }
 
