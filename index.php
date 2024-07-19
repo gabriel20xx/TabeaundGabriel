@@ -25,14 +25,14 @@ if ($unlocked) {
     if (isset($_GET['page'])) {
         $page = $_GET['page'];
         if ($page === 'main') {
-            include "../main.php";
+            include "main.php";
         }
         if ($page === 'gallery') {
-            include "../gallery.php";
+            include "gallery.php";
         }
     
     } else {
-        include "../index.php";
+        include "index.php";
     }
 } else {
     include "login.php";
