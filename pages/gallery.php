@@ -15,7 +15,7 @@ if (!defined('ACCESS_ALLOWED')) {
 
         foreach ($images as $image) {
             echo '<div style="display: inline-block; margin: 10px; text-align: center;">';
-            echo '<img src="' . htmlspecialchars($image) . '" style="width: 150px; height: 150px; object-fit: cover;"><br>';
+            echo '<img src="' . htmlspecialchars($image) . '" style="width: 150px; height: 150px; object-fit: contain;"><br>';
             echo '<form action="../includes/delete.php" method="post" style="display:inline;">';
             echo '<input type="hidden" name="image" value="' . htmlspecialchars($image) . '">';
             echo '<button type="submit">Delete</button>';
