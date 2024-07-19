@@ -21,7 +21,12 @@ include "includes/head.php";
     <div>
         <?php
         $directory = 'gallery/';
-        $images = glob($directory . "*.{jpg,png,gif,jpeg}", GLOB_BRACE);
+        $images = array_merge(
+            glob($directory . "*.jpg"),
+            glob($directory . "*.png"),
+            glob($directory . "*.gif"),
+            glob($directory . "*.jpeg")
+        );
 
         foreach($images as $image) {
             echo '<div style="display: inline-block; margin: 10px; text-align: center;">';
@@ -34,7 +39,7 @@ include "includes/head.php";
         }
         ?>
     </div>
-    
+
     <script>
         document.getElementById('fileInput').addEventListener('change', function() {
             this.parentElement.submit();
