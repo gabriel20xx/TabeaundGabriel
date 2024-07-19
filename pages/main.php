@@ -36,7 +36,7 @@ if (!defined('ACCESS_ALLOWED')) {
     }
 
     // Button container
-    include "parts/buttons.php";
+    include "../parts/buttons.php";
 
     // Envelope container
     $data = [
@@ -74,7 +74,7 @@ if (!defined('ACCESS_ALLOWED')) {
     echo '<div class="overlay d-none" id="starContainer">';
     echo '<div class="overlay-content">';
     echo '<h2>Daily Quote</h2>';
-    include('includes/daily_quote.php');
+    include('../includes/daily_quote.php');
     echo '</div>';
     echo '</div>';
 

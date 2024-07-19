@@ -25,7 +25,7 @@ if (!defined('ACCESS_ALLOWED')) {
     echo '</div>';
 
     // Button container
-    include "parts/buttons.php";
+    include "../parts/buttons.php";
 ?>
     <script>
     document.getElementById('uploadButton').addEventListener('click', function () {
