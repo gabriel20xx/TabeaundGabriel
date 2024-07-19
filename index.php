@@ -35,10 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 include "includes/head.php";
 echo '<body>';
 
-if ($unlocked) {
-    // Header
-    include "includes/header.php";
+// Header
+include "includes/header.php";
 
+if ($unlocked) {
     // Quote and images container
     $quotesAuthors = [
         ["quote" => "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.", "author" => "Angelita Lim"],
@@ -148,9 +148,6 @@ if ($unlocked) {
     echo '</div>';
     echo '</div>';
 
-    // Footer
-    include "includes/footer.php";
-
     // JavaScript
     echo '<script src="js/fallanimation.js"></script>';
     echo '<script src="js/envelope.js"></script>';
@@ -182,5 +179,5 @@ if ($unlocked) {
     echo '<script src="js/pin.js"></script>';
 }
 
-echo '</body>';
-echo '</html>';
+// Footer
+include "includes/footer.php";
