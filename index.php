@@ -41,6 +41,7 @@ if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
     echo '<script src="js/show-hide.js"></script>';
     echo '<script src="js/lock.js"></script>';
 } else {
+    include "includes/login.php";
     include "pages/login.php";
 }
 

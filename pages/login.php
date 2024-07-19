@@ -1,8 +1,4 @@
 <?php
-session_start(); // Start session
-
-$page = isset($_GET['page']) ? $_GET['page'] : 'main'; // Ensure $page is defined
-
 // Login container
 echo '<div>';
 echo '<form id="pin_input" action="index.php?page=' . $page . '" method="post">';
@@ -25,5 +21,5 @@ if ($incorrect) {
 echo '</div>';
 
 // JavaScript
-echo '<script src="../js/pin.js"></script>';
+echo '<script src="js/pin.js"></script>';
 ?>
