@@ -42,7 +42,7 @@ function call_api($method, $url, $data = false, $api_key = null)
 
 $api_key = 'WfvXGr1LNov5Rgj19vzppLhAAhBTwlx43v1x0L9a';
 $category = 'inspire';
-$quoteFilename = 'daily-quote.txt';
+$quoteFilename = 'quote/daily-quote.txt';
 $failed = false;
 
 if (file_exists($quoteFilename) && date('Y-m-d', filemtime($quoteFilename)) == date('Y-m-d')) {
