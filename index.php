@@ -18,6 +18,8 @@ $daysSince = $interval->format('%a');
 
 $correctPin = str_pad($daysSince, 4, '0', STR_PAD_LEFT);
 
+include "includes/login.php";
+
 include "parts/head.php";
 echo '<body class="vh-100 container d-flex flex-column align-items-center justify-content-between text-center">';
 
@@ -41,7 +43,6 @@ if (isset($_SESSION['pin']) && $_SESSION['pin'] === $correctPin) {
     echo '<script src="js/show-hide.js"></script>';
     echo '<script src="js/lock.js"></script>';
 } else {
-    include "includes/login.php";
     include "pages/login.php";
 }
 
