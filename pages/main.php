@@ -102,11 +102,5 @@ if (!defined('ACCESS_ALLOWED')) {
     echo '</div>';
     echo '</div>';
     echo '</div>';
-
-    // JavaScript
-    echo '<script src="js/fallanimation.js"></script>';
-    echo '<script src="js/envelope.js"></script>';
-    echo '<script src="js/show-hide.js"></script>';
-    echo '<script src="js/lock.js"></script>';
 }
 ?>
